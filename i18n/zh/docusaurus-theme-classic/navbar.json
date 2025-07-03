@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Buddie",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Buddie Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "主页",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.Quick Start": {
+    "message": "快速开始",
+    "description": "Navbar item with label Quick Start"
+  },
+  "item.label.Technical Docs": {
+    "message": "技术文档",
+    "description": "Navbar item with label Technical Docs"
+  },
+  "item.label.Changelog & Blog": {
+    "message": "日志&博客",
+    "description": "Navbar item with label Changelog & Blog"
+  },
+  "item.label.About Us": {
+    "message": "关于我们",
+    "description": "Navbar item with label About Us"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

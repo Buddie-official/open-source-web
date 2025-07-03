@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.HomeSidebar.category.Home": {
+    "message": "Home",
+    "description": "The label for category Home in sidebar HomeSidebar"
+  },
+  "sidebar.QuickStartSidebar.category.Quick Start": {
+    "message": "Quick Start",
+    "description": "The label for category Quick Start in sidebar QuickStartSidebar"
+  },
+  "sidebar.TechnicalDocsSidebar.category.Technical Documentation": {
+    "message": "Technical Documentation",
+    "description": "The label for category Technical Documentation in sidebar TechnicalDocsSidebar"
+  },
+  "sidebar.ChangelogBlogSidebar.category.Changelog & Blog": {
+    "message": "Changelog & Blog",
+    "description": "The label for category Changelog & Blog in sidebar ChangelogBlogSidebar"
+  }
+}
