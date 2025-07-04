@@ -10,8 +10,30 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "BUDDIE",
+  // tagline: "An open-source project for the future of voice interaction — fully open hardware design, firmware code, and mobile app integration",
+  customFields: {
+    homepageContent: {
+      en: {
+        title: 'BUDDIE',
+        sections: [
+          { title: 'Open Hardware Design', description: 'We provide full access to Buddie’s PCB...' },
+          { title: 'Customizable Firmware', description: 'Built on ESP32-S3, the Buddie firmware supports...' },
+          { title: 'Full Mobile Integration', description: 'We open-sourced the Buddie mobile app...' },
+        ],
+      },
+      zh: {
+        title: 'BUDDIE',
+        sections: [
+          { title: '开放的硬件设计', description: '我们公开了 Buddie 耳机的 PCB、原理图与 BOM 表...' },
+          { title: '可自定义的固件系统', description: '基于 ESP32-S3，Buddie 固件支持蓝牙连接、语音处理与 LCD 显示...' },
+          { title: '完整的移动端配套', description: '我们开源了 Buddie App 的核心逻辑，涵盖设备配对、语音控制与用户设置...' },
+        ],
+      },
+    },
+  },
+
+
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -57,10 +79,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          id: 'default', // 用于区分多实例插件
-          path: 'docs',
-          routeBasePath: 'docs',
-          sidebarPath: require.resolve('./sidebars.js'),
+          id: "default", // 用于区分多实例插件
+          path: "docs",
+          routeBasePath: "docs",
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -96,7 +118,7 @@ const config = {
         hashed: true,
         indexDocs: true,
         // indexPages: true,
-        language: ['en', 'zh'],
+        language: ["en", "zh"],
         highlightSearchTermsOnTargetPage: true,
         searchResultLimits: 8,
         // docsRouteBasePath: ['/docs'], // 如果你改了路由可以配置这个
@@ -109,6 +131,12 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      colorMode: {
+        defaultMode: 'dark',     // 👈 默认主题为 dark
+        disableSwitch: false,    // 是否禁用切换按钮（true 则用户无法切换）
+        respectPrefersColorScheme: false, // 是否尊重用户系统偏好（这里设为 false 才始终用 dark）
+      },
+
       navbar: {
         title: "Buddie",
         logo: {
@@ -116,12 +144,6 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'HomeSidebar',
-            label: "Home",
-            position: "left",
-          },
           {
             type: "docSidebar",
             sidebarId: "QuickStartSidebar",
@@ -141,7 +163,8 @@ const config = {
             label: "Changelog & Blog",
           },
           {
-            to: "/aboutus",
+            type: "docSidebar",
+            sidebarId: "AboutUsSidebar",
             position: "left",
             label: "About Us",
           },

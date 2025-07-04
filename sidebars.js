@@ -21,19 +21,14 @@ const sidebars = {
     {
       type: "category",
       label: "Home",
-      items: [
-        'Home/home_1',
-        'Home/home_2',
-      ],
+      items: ["Home/home_1", "Home/home_2"],
     },
   ],
   QuickStartSidebar: [
     {
       type: "category",
       label: "Quick Start",
-      items: [
-        'QuickStart/index',
-      ]
+      items: ["QuickStart/index"],
     },
   ],
   TechnicalDocsSidebar: [
@@ -58,6 +53,13 @@ const sidebars = {
         "Changelog_Blog/Blog/index",
         "Changelog_Blog/Changelog/index",
       ],
+    },
+  ],
+  AboutUsSidebar: [
+    {
+      type: "category",
+      label: "About Us",
+      items: ["AboutUs/index"],
     },
   ],
   // But you can create a sidebar manually

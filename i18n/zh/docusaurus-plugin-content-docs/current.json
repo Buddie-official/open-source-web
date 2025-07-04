@@ -18,5 +18,9 @@
   "sidebar.ChangelogBlogSidebar.category.Changelog & Blog": {
     "message": "Changelog & Blog",
     "description": "The label for category Changelog & Blog in sidebar ChangelogBlogSidebar"
+  },
+  "sidebar.AboutUsSidebar.category.About Us": {
+    "message": "About Us",
+    "description": "The label for category About Us in sidebar AboutUsSidebar"
   }
 }
