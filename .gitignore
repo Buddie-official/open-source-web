@@ -1,0 +1,11 @@
+# 忽略 node_modules
+node_modules/
+
+# 忽略 build 文件夹
+build/
+
+# 可选：其他常见忽略内容
+.docusaurus/
+# .DS_Store
+# npm-debug.log
+# .env
