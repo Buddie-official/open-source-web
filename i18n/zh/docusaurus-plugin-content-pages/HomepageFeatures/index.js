@@ -6,7 +6,7 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: '完整的移动端配套',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    image: require('@site/static/img/home_app_picture.png').default,
     description: (
       <>
         一套完整的移动端语音交互系统：
@@ -18,7 +18,7 @@ const FeatureList = [
   },
   {
     title: '可自定义的固件系统',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    image: require('@site/static/img/home_firmware_picture.png').default,
     description: (
       <>
         基于杰理芯片的一整套功能完善、可定制的固件，涵盖音频协议、压缩算法与系统控制逻辑，并与 PCB 配置深度匹配，便于快速移植与功能扩展。
@@ -28,7 +28,7 @@ const FeatureList = [
   },
   {
     title: '开放的硬件设计',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    image: require('@site/static/img/home_pcb_picture.png').default,
     description: (
       <>
         全面开放 PCB 布局图、原理图与 BOM 表，适用于 DIY 装配、快速原型设计或定制硬件开发。
@@ -38,11 +38,12 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description, link_url}) {
+function Feature({image, title, description, link_url}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* { <Svg className={styles.featureSvg} role="img" /> } */}
+        <img src={image} className={styles.featureImage} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

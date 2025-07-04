@@ -6,7 +6,7 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Full Mobile Integration',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    image: require('@site/static/img/home_app_picture.png').default,
     description: (
       <>
         A complete mobile solution for intelligent voice interaction — with open-source AI logic, speech models, and a plug-and-play workflow connecting hardware and app.
@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: 'Customizable Firmware',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    image: require('@site/static/img/home_firmware_picture.png').default,
     description: (
       <>
         A full-featured, customizable firmware based on JieLi chips — including audio protocols, compression algorithms, and system control. Seamlessly aligned with the PCB configuration for easy adaptation and expansion.
@@ -26,7 +26,7 @@ const FeatureList = [
   },
   {
     title: 'Open Hardware Design',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    image: require('@site/static/img/home_pcb_picture.png').default,
     description: (
       <>
         Full access to PCB layouts, schematics, and BOM files — ready for DIY assembly, rapid prototyping, or custom hardware projects.
@@ -36,11 +36,12 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description, link_url}) {
+function Feature({image, title, description, link_url}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* <Svg className={styles.featureSvg} role="img" /> */}
+        <img src={image} className={styles.featureImage} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

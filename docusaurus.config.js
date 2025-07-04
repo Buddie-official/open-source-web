@@ -34,7 +34,7 @@ const config = {
   },
 
 
-  favicon: "img/favicon.ico",
+  favicon: "img/fig_logo.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -130,7 +130,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/buddie-social-card.jpg",
       colorMode: {
         defaultMode: 'dark',     // 👈 默认主题为 dark
         disableSwitch: false,    // 是否禁用切换按钮（true 则用户无法切换）
@@ -141,7 +141,7 @@ const config = {
         title: "Buddie",
         logo: {
           alt: "Buddie Logo",
-          src: "img/logo.svg",
+          src: "img/fig_logo.png",
         },
         items: [
           {
@@ -169,7 +169,7 @@ const config = {
             label: "About Us",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/Buddie-official/open-source-web",
             label: "GitHub",
             position: "right",
           },
