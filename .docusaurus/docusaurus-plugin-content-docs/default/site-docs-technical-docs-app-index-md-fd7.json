@@ -1,0 +1,26 @@
+{
+  "id": "TechnicalDocs/APP/index",
+  "title": "index",
+  "description": "APP",
+  "source": "@site/docs/TechnicalDocs/APP/index.md",
+  "sourceDirName": "TechnicalDocs/APP",
+  "slug": "/TechnicalDocs/APP/",
+  "permalink": "/open-source-web/zh/docs/TechnicalDocs/APP/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/TechnicalDocs/APP/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar": "TechnicalDocsSidebar"
+  },
+  "sidebar": "TechnicalDocsSidebar",
+  "previous": {
+    "title": "index",
+    "permalink": "/open-source-web/zh/docs/TechnicalDocs/"
+  },
+  "next": {
+    "title": "index",
+    "permalink": "/open-source-web/zh/docs/TechnicalDocs/FirmWare/"
+  }
+}

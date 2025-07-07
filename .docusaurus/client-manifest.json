@@ -1,0 +1,901 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "489": [
+      5741,
+      489
+    ],
+    "2237": [
+      2237
+    ],
+    "3776": [
+      867,
+      1869,
+      3249,
+      4813,
+      6061,
+      6932,
+      7643,
+      8401,
+      3776
+    ],
+    "4523": [
+      4809,
+      4523
+    ],
+    "4809": [
+      4523,
+      4809
+    ],
+    "5741": [
+      489,
+      5741
+    ],
+    "6932": [
+      867,
+      1869,
+      3249,
+      3776,
+      4212,
+      4813,
+      7643,
+      6932
+    ],
+    "17896441": [
+      1869,
+      3776,
+      8401
+    ],
+    "59362658": [
+      9325
+    ],
+    "main": [
+      1869,
+      5354,
+      8792
+    ],
+    "runtime~main": [
+      1869,
+      8792,
+      5354
+    ],
+    "01a85c17": [
+      1869,
+      8209
+    ],
+    "0e384e19": [
+      3976
+    ],
+    "0e695648": [
+      9744
+    ],
+    "0f78e3e3": [
+      4252
+    ],
+    "138e0e15": [
+      4921
+    ],
+    "17950e23": [
+      93
+    ],
+    "1a4e3797": [
+      1869,
+      2138
+    ],
+    "1ba63770": [
+      9896
+    ],
+    "1f391b9e": [
+      1869,
+      3776,
+      6061
+    ],
+    "33fc5bb8": [
+      1869,
+      3776,
+      6932,
+      867
+    ],
+    "36994c47": [
+      9858
+    ],
+    "3720c009": [
+      1869,
+      4787
+    ],
+    "38c56ea9": [
+      8187
+    ],
+    "487a9266": [
+      2550
+    ],
+    "4e31a734": [
+      1859
+    ],
+    "52b34ab4": [
+      5872
+    ],
+    "53898ce4": [
+      1869,
+      5254
+    ],
+    "550c734a": [
+      5073
+    ],
+    "5e95c892": [
+      9647
+    ],
+    "621db11d": [
+      1869,
+      6932,
+      4212
+    ],
+    "65d5d11a": [
+      658
+    ],
+    "6875c492": [
+      1869,
+      3776,
+      6932,
+      4813
+    ],
+    "70aa8ad9": [
+      6140
+    ],
+    "73664a40": [
+      1972
+    ],
+    "7560a3d5": [
+      1232
+    ],
+    "7661071f": [
+      8737
+    ],
+    "814f3328": [
+      7472
+    ],
+    "835701a8": [
+      3882
+    ],
+    "8717b14a": [
+      3694
+    ],
+    "925b3f96": [
+      8609
+    ],
+    "96893b51": [
+      9442
+    ],
+    "9a241406": [
+      1610
+    ],
+    "9dd46fe1": [
+      6930
+    ],
+    "9e4087bc": [
+      2711
+    ],
+    "a6aa9e1f": [
+      1869,
+      3776,
+      6932,
+      7643
+    ],
+    "a7456010": [
+      1235
+    ],
+    "a7bd4aaa": [
+      7098
+    ],
+    "a94703ab": [
+      1869,
+      9048
+    ],
+    "aba21aa0": [
+      5742
+    ],
+    "acecf23e": [
+      1903
+    ],
+    "b3b58923": [
+      1417
+    ],
+    "b4bf3025": [
+      5991
+    ],
+    "c01b3401": [
+      575
+    ],
+    "ccc49370": [
+      1869,
+      3776,
+      6932,
+      3249
+    ],
+    "d331bf9e": [
+      6358
+    ],
+    "d9f32620": [
+      5557
+    ],
+    "df203c0f": [
+      1869,
+      4279
+    ],
+    "e273c56f": [
+      9328
+    ],
+    "e87c41be": [
+      5916
+    ],
+    "ea35099d": [
+      3171
+    ],
+    "ee9dadb6": [
+      7777
+    ],
+    "f4f34a3a": [
+      3637
+    ],
+    "f639c9c6": [
+      6276
+    ],
+    "f81fee47": [
+      6353
+    ],
+    "faff7bb8": [
+      5161
+    ],
+    "fd72cadb": [
+      7608
+    ],
+    "fe3e04e0": [
+      1203
+    ],
+    "styles": [
+      867,
+      2138,
+      3249,
+      3776,
+      4212,
+      4279,
+      4787,
+      4813,
+      5254,
+      5354,
+      6061,
+      6932,
+      7643,
+      8209,
+      8401,
+      8792,
+      9048,
+      1869
+    ]
+  },
+  "assets": {
+    "93": {
+      "js": [
+        {
+          "file": "assets/js/17950e23.4c842e65.js",
+          "hash": "616afcab3d48b71b",
+          "publicPath": "/open-source-web/zh/assets/js/17950e23.4c842e65.js"
+        }
+      ]
+    },
+    "489": {
+      "js": [
+        {
+          "file": "assets/js/489.87759f75.js",
+          "hash": "fda96bd04064840a",
+          "publicPath": "/open-source-web/zh/assets/js/489.87759f75.js"
+        }
+      ]
+    },
+    "575": {
+      "js": [
+        {
+          "file": "assets/js/c01b3401.ccfd0e18.js",
+          "hash": "c9d14e97aa1a9877",
+          "publicPath": "/open-source-web/zh/assets/js/c01b3401.ccfd0e18.js"
+        }
+      ]
+    },
+    "658": {
+      "js": [
+        {
+          "file": "assets/js/65d5d11a.3b85da40.js",
+          "hash": "dd29c54fce5512b7",
+          "publicPath": "/open-source-web/zh/assets/js/65d5d11a.3b85da40.js"
+        }
+      ]
+    },
+    "867": {
+      "js": [
+        {
+          "file": "assets/js/33fc5bb8.7cf1445f.js",
+          "hash": "3720bafb8abb69ef",
+          "publicPath": "/open-source-web/zh/assets/js/33fc5bb8.7cf1445f.js"
+        }
+      ]
+    },
+    "1203": {
+      "js": [
+        {
+          "file": "assets/js/fe3e04e0.c9885c72.js",
+          "hash": "bb8c844197edbd00",
+          "publicPath": "/open-source-web/zh/assets/js/fe3e04e0.c9885c72.js"
+        }
+      ]
+    },
+    "1232": {
+      "js": [
+        {
+          "file": "assets/js/7560a3d5.cc008216.js",
+          "hash": "a6ad6356b70b2447",
+          "publicPath": "/open-source-web/zh/assets/js/7560a3d5.cc008216.js"
+        }
+      ]
+    },
+    "1235": {
+      "js": [
+        {
+          "file": "assets/js/a7456010.2f05987d.js",
+          "hash": "1ee3880ac7e0919f",
+          "publicPath": "/open-source-web/zh/assets/js/a7456010.2f05987d.js"
+        }
+      ]
+    },
+    "1417": {
+      "js": [
+        {
+          "file": "assets/js/b3b58923.1a05c98d.js",
+          "hash": "9c47f5529af9c458",
+          "publicPath": "/open-source-web/zh/assets/js/b3b58923.1a05c98d.js"
+        }
+      ]
+    },
+    "1610": {
+      "js": [
+        {
+          "file": "assets/js/9a241406.b7ce3f70.js",
+          "hash": "60e635793606a476",
+          "publicPath": "/open-source-web/zh/assets/js/9a241406.b7ce3f70.js"
+        }
+      ]
+    },
+    "1859": {
+      "js": [
+        {
+          "file": "assets/js/4e31a734.4c312668.js",
+          "hash": "898c26f10ecea7cd",
+          "publicPath": "/open-source-web/zh/assets/js/4e31a734.4c312668.js"
+        }
+      ]
+    },
+    "1869": {
+      "css": [
+        {
+          "file": "assets/css/styles.3f4c7b2c.css",
+          "hash": "c926e9ff460cce62",
+          "publicPath": "/open-source-web/zh/assets/css/styles.3f4c7b2c.css"
+        }
+      ]
+    },
+    "1903": {
+      "js": [
+        {
+          "file": "assets/js/acecf23e.e3ff5e08.js",
+          "hash": "3f84b55421f57218",
+          "publicPath": "/open-source-web/zh/assets/js/acecf23e.e3ff5e08.js"
+        }
+      ]
+    },
+    "1972": {
+      "js": [
+        {
+          "file": "assets/js/73664a40.f0ac35b8.js",
+          "hash": "680abeb18fd15d0d",
+          "publicPath": "/open-source-web/zh/assets/js/73664a40.f0ac35b8.js"
+        }
+      ]
+    },
+    "2138": {
+      "js": [
+        {
+          "file": "assets/js/1a4e3797.c6af5758.js",
+          "hash": "0216b99b23fb6187",
+          "publicPath": "/open-source-web/zh/assets/js/1a4e3797.c6af5758.js"
+        }
+      ]
+    },
+    "2237": {
+      "js": [
+        {
+          "file": "assets/js/2237.878b4085.js",
+          "hash": "a4bf47ff03ef4821",
+          "publicPath": "/open-source-web/zh/assets/js/2237.878b4085.js"
+        }
+      ]
+    },
+    "2550": {
+      "js": [
+        {
+          "file": "assets/js/487a9266.dfbbc774.js",
+          "hash": "339127154a10f9b0",
+          "publicPath": "/open-source-web/zh/assets/js/487a9266.dfbbc774.js"
+        }
+      ]
+    },
+    "2711": {
+      "js": [
+        {
+          "file": "assets/js/9e4087bc.51a95d5b.js",
+          "hash": "06bc3a86d37802b3",
+          "publicPath": "/open-source-web/zh/assets/js/9e4087bc.51a95d5b.js"
+        }
+      ]
+    },
+    "3171": {
+      "js": [
+        {
+          "file": "assets/js/ea35099d.0beb7fd2.js",
+          "hash": "14811bf1ddefa895",
+          "publicPath": "/open-source-web/zh/assets/js/ea35099d.0beb7fd2.js"
+        }
+      ]
+    },
+    "3249": {
+      "js": [
+        {
+          "file": "assets/js/ccc49370.98afaa08.js",
+          "hash": "af2df33e0688553f",
+          "publicPath": "/open-source-web/zh/assets/js/ccc49370.98afaa08.js"
+        }
+      ]
+    },
+    "3637": {
+      "js": [
+        {
+          "file": "assets/js/f4f34a3a.c6ae8adc.js",
+          "hash": "f8b5594e52101d5a",
+          "publicPath": "/open-source-web/zh/assets/js/f4f34a3a.c6ae8adc.js"
+        }
+      ]
+    },
+    "3694": {
+      "js": [
+        {
+          "file": "assets/js/8717b14a.0881806d.js",
+          "hash": "44b8917f10eab735",
+          "publicPath": "/open-source-web/zh/assets/js/8717b14a.0881806d.js"
+        }
+      ]
+    },
+    "3776": {
+      "js": [
+        {
+          "file": "assets/js/3776.949ab94a.js",
+          "hash": "795e7f37f2c6a3c7",
+          "publicPath": "/open-source-web/zh/assets/js/3776.949ab94a.js"
+        }
+      ]
+    },
+    "3882": {
+      "js": [
+        {
+          "file": "assets/js/835701a8.370b921d.js",
+          "hash": "3c1eb6e690bc2ffc",
+          "publicPath": "/open-source-web/zh/assets/js/835701a8.370b921d.js"
+        }
+      ]
+    },
+    "3976": {
+      "js": [
+        {
+          "file": "assets/js/0e384e19.792bb044.js",
+          "hash": "2e87c499390dc04d",
+          "publicPath": "/open-source-web/zh/assets/js/0e384e19.792bb044.js"
+        }
+      ]
+    },
+    "4212": {
+      "js": [
+        {
+          "file": "assets/js/621db11d.cfb5fdc2.js",
+          "hash": "85ec60d6d8b25c4e",
+          "publicPath": "/open-source-web/zh/assets/js/621db11d.cfb5fdc2.js"
+        }
+      ]
+    },
+    "4252": {
+      "js": [
+        {
+          "file": "assets/js/0f78e3e3.1017bb38.js",
+          "hash": "deb141d2d1eab14f",
+          "publicPath": "/open-source-web/zh/assets/js/0f78e3e3.1017bb38.js"
+        }
+      ]
+    },
+    "4279": {
+      "js": [
+        {
+          "file": "assets/js/df203c0f.0433d33d.js",
+          "hash": "3652b16c16924e21",
+          "publicPath": "/open-source-web/zh/assets/js/df203c0f.0433d33d.js"
+        }
+      ]
+    },
+    "4523": {
+      "js": [
+        {
+          "file": "assets/js/4523.6f49f701.js",
+          "hash": "0f4617fc2bdf961a",
+          "publicPath": "/open-source-web/zh/assets/js/4523.6f49f701.js"
+        }
+      ]
+    },
+    "4787": {
+      "js": [
+        {
+          "file": "assets/js/3720c009.865809ae.js",
+          "hash": "ec49c9ba3ed77b58",
+          "publicPath": "/open-source-web/zh/assets/js/3720c009.865809ae.js"
+        }
+      ]
+    },
+    "4809": {
+      "js": [
+        {
+          "file": "assets/js/4809.4b89ce3b.js",
+          "hash": "85356acb2caf2272",
+          "publicPath": "/open-source-web/zh/assets/js/4809.4b89ce3b.js"
+        }
+      ]
+    },
+    "4813": {
+      "js": [
+        {
+          "file": "assets/js/6875c492.8c4ebf0e.js",
+          "hash": "92219029b2928920",
+          "publicPath": "/open-source-web/zh/assets/js/6875c492.8c4ebf0e.js"
+        }
+      ]
+    },
+    "4921": {
+      "js": [
+        {
+          "file": "assets/js/138e0e15.170dce83.js",
+          "hash": "5d6ef56dad736c41",
+          "publicPath": "/open-source-web/zh/assets/js/138e0e15.170dce83.js"
+        }
+      ]
+    },
+    "5073": {
+      "js": [
+        {
+          "file": "assets/js/550c734a.5958753d.js",
+          "hash": "99688fde5f4a5ee0",
+          "publicPath": "/open-source-web/zh/assets/js/550c734a.5958753d.js"
+        }
+      ]
+    },
+    "5161": {
+      "js": [
+        {
+          "file": "assets/js/faff7bb8.199bebb0.js",
+          "hash": "39f1908de334559b",
+          "publicPath": "/open-source-web/zh/assets/js/faff7bb8.199bebb0.js"
+        }
+      ]
+    },
+    "5254": {
+      "js": [
+        {
+          "file": "assets/js/53898ce4.25fdc3d5.js",
+          "hash": "45a5f080b258f1f3",
+          "publicPath": "/open-source-web/zh/assets/js/53898ce4.25fdc3d5.js"
+        }
+      ]
+    },
+    "5354": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.0e2060d2.js",
+          "hash": "ac06b699aa15cc62",
+          "publicPath": "/open-source-web/zh/assets/js/runtime~main.0e2060d2.js"
+        }
+      ]
+    },
+    "5557": {
+      "js": [
+        {
+          "file": "assets/js/d9f32620.d806c348.js",
+          "hash": "376a78ef3103a11b",
+          "publicPath": "/open-source-web/zh/assets/js/d9f32620.d806c348.js"
+        }
+      ]
+    },
+    "5741": {
+      "js": [
+        {
+          "file": "assets/js/5741.96a6a2d6.js",
+          "hash": "a9afb6090b7581fe",
+          "publicPath": "/open-source-web/zh/assets/js/5741.96a6a2d6.js"
+        }
+      ]
+    },
+    "5742": {
+      "js": [
+        {
+          "file": "assets/js/aba21aa0.88370a23.js",
+          "hash": "34b35e5c9d274396",
+          "publicPath": "/open-source-web/zh/assets/js/aba21aa0.88370a23.js"
+        }
+      ]
+    },
+    "5872": {
+      "js": [
+        {
+          "file": "assets/js/52b34ab4.f5babcf4.js",
+          "hash": "36d9923e3a0cd178",
+          "publicPath": "/open-source-web/zh/assets/js/52b34ab4.f5babcf4.js"
+        }
+      ]
+    },
+    "5916": {
+      "js": [
+        {
+          "file": "assets/js/e87c41be.6cda3fad.js",
+          "hash": "bf20e8a1e91a4ca2",
+          "publicPath": "/open-source-web/zh/assets/js/e87c41be.6cda3fad.js"
+        }
+      ]
+    },
+    "5991": {
+      "js": [
+        {
+          "file": "assets/js/b4bf3025.2e18ddda.js",
+          "hash": "d09cd2b9a3294792",
+          "publicPath": "/open-source-web/zh/assets/js/b4bf3025.2e18ddda.js"
+        }
+      ]
+    },
+    "6061": {
+      "js": [
+        {
+          "file": "assets/js/1f391b9e.97f57871.js",
+          "hash": "e4d539f2c8af964a",
+          "publicPath": "/open-source-web/zh/assets/js/1f391b9e.97f57871.js"
+        }
+      ]
+    },
+    "6140": {
+      "js": [
+        {
+          "file": "assets/js/70aa8ad9.83f57996.js",
+          "hash": "eccb26f64c497a27",
+          "publicPath": "/open-source-web/zh/assets/js/70aa8ad9.83f57996.js"
+        }
+      ]
+    },
+    "6276": {
+      "js": [
+        {
+          "file": "assets/js/f639c9c6.1c6846b7.js",
+          "hash": "e99abda518c77bf0",
+          "publicPath": "/open-source-web/zh/assets/js/f639c9c6.1c6846b7.js"
+        }
+      ]
+    },
+    "6353": {
+      "js": [
+        {
+          "file": "assets/js/f81fee47.fa671490.js",
+          "hash": "8aa9e17ade94a5cc",
+          "publicPath": "/open-source-web/zh/assets/js/f81fee47.fa671490.js"
+        }
+      ]
+    },
+    "6358": {
+      "js": [
+        {
+          "file": "assets/js/d331bf9e.d4cbaed9.js",
+          "hash": "186d83f17f72173a",
+          "publicPath": "/open-source-web/zh/assets/js/d331bf9e.d4cbaed9.js"
+        }
+      ]
+    },
+    "6930": {
+      "js": [
+        {
+          "file": "assets/js/9dd46fe1.ae20935e.js",
+          "hash": "f5357c300544aeff",
+          "publicPath": "/open-source-web/zh/assets/js/9dd46fe1.ae20935e.js"
+        }
+      ]
+    },
+    "6932": {
+      "js": [
+        {
+          "file": "assets/js/6932.66d9aada.js",
+          "hash": "fedf4bdd53d11cc8",
+          "publicPath": "/open-source-web/zh/assets/js/6932.66d9aada.js"
+        }
+      ]
+    },
+    "7098": {
+      "js": [
+        {
+          "file": "assets/js/a7bd4aaa.f67dbecd.js",
+          "hash": "c4ea3bad9d46b33e",
+          "publicPath": "/open-source-web/zh/assets/js/a7bd4aaa.f67dbecd.js"
+        }
+      ]
+    },
+    "7472": {
+      "js": [
+        {
+          "file": "assets/js/814f3328.f554b5ca.js",
+          "hash": "28d155b77ad85ddf",
+          "publicPath": "/open-source-web/zh/assets/js/814f3328.f554b5ca.js"
+        }
+      ]
+    },
+    "7608": {
+      "js": [
+        {
+          "file": "assets/js/fd72cadb.aa313a52.js",
+          "hash": "e524c4d1182bf861",
+          "publicPath": "/open-source-web/zh/assets/js/fd72cadb.aa313a52.js"
+        }
+      ]
+    },
+    "7643": {
+      "js": [
+        {
+          "file": "assets/js/a6aa9e1f.3b4c8033.js",
+          "hash": "0b822f761b4a4177",
+          "publicPath": "/open-source-web/zh/assets/js/a6aa9e1f.3b4c8033.js"
+        }
+      ]
+    },
+    "7777": {
+      "js": [
+        {
+          "file": "assets/js/ee9dadb6.baa16979.js",
+          "hash": "730125280f36231b",
+          "publicPath": "/open-source-web/zh/assets/js/ee9dadb6.baa16979.js"
+        }
+      ]
+    },
+    "8187": {
+      "js": [
+        {
+          "file": "assets/js/38c56ea9.3a5dbbef.js",
+          "hash": "e5db1830f4a373de",
+          "publicPath": "/open-source-web/zh/assets/js/38c56ea9.3a5dbbef.js"
+        }
+      ]
+    },
+    "8209": {
+      "js": [
+        {
+          "file": "assets/js/01a85c17.141083a1.js",
+          "hash": "7ba11b90284042a4",
+          "publicPath": "/open-source-web/zh/assets/js/01a85c17.141083a1.js"
+        }
+      ]
+    },
+    "8401": {
+      "js": [
+        {
+          "file": "assets/js/17896441.04ca5254.js",
+          "hash": "0473f3bece0284f1",
+          "publicPath": "/open-source-web/zh/assets/js/17896441.04ca5254.js"
+        }
+      ]
+    },
+    "8609": {
+      "js": [
+        {
+          "file": "assets/js/925b3f96.db02747d.js",
+          "hash": "7f33aeb2ad3e646f",
+          "publicPath": "/open-source-web/zh/assets/js/925b3f96.db02747d.js"
+        }
+      ]
+    },
+    "8737": {
+      "js": [
+        {
+          "file": "assets/js/7661071f.964e6ead.js",
+          "hash": "83fbdedfcd34ac61",
+          "publicPath": "/open-source-web/zh/assets/js/7661071f.964e6ead.js"
+        }
+      ]
+    },
+    "8792": {
+      "js": [
+        {
+          "file": "assets/js/main.c89dd6c0.js",
+          "hash": "8ac0a8094ca4b1ad",
+          "publicPath": "/open-source-web/zh/assets/js/main.c89dd6c0.js"
+        }
+      ]
+    },
+    "9048": {
+      "js": [
+        {
+          "file": "assets/js/a94703ab.4e1bca4b.js",
+          "hash": "d7da659ed529fb1f",
+          "publicPath": "/open-source-web/zh/assets/js/a94703ab.4e1bca4b.js"
+        }
+      ]
+    },
+    "9325": {
+      "js": [
+        {
+          "file": "assets/js/59362658.dfc57b08.js",
+          "hash": "a4985df47555d9d5",
+          "publicPath": "/open-source-web/zh/assets/js/59362658.dfc57b08.js"
+        }
+      ]
+    },
+    "9328": {
+      "js": [
+        {
+          "file": "assets/js/e273c56f.a1e1c34a.js",
+          "hash": "6b2f01c16482bb9d",
+          "publicPath": "/open-source-web/zh/assets/js/e273c56f.a1e1c34a.js"
+        }
+      ]
+    },
+    "9442": {
+      "js": [
+        {
+          "file": "assets/js/96893b51.1bebdcfd.js",
+          "hash": "354cebbed41ef1e2",
+          "publicPath": "/open-source-web/zh/assets/js/96893b51.1bebdcfd.js"
+        }
+      ]
+    },
+    "9647": {
+      "js": [
+        {
+          "file": "assets/js/5e95c892.c9a03749.js",
+          "hash": "07a51f483dd9f602",
+          "publicPath": "/open-source-web/zh/assets/js/5e95c892.c9a03749.js"
+        }
+      ]
+    },
+    "9744": {
+      "js": [
+        {
+          "file": "assets/js/0e695648.a21f8731.js",
+          "hash": "ad29c1130782a2f1",
+          "publicPath": "/open-source-web/zh/assets/js/0e695648.a21f8731.js"
+        }
+      ]
+    },
+    "9858": {
+      "js": [
+        {
+          "file": "assets/js/36994c47.56f87c0d.js",
+          "hash": "92c6c32a80e818dd",
+          "publicPath": "/open-source-web/zh/assets/js/36994c47.56f87c0d.js"
+        }
+      ]
+    },
+    "9896": {
+      "js": [
+        {
+          "file": "assets/js/1ba63770.bba520be.js",
+          "hash": "7350e021d03da40f",
+          "publicPath": "/open-source-web/zh/assets/js/1ba63770.bba520be.js"
+        }
+      ]
+    }
+  }
+}

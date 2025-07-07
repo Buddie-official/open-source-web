@@ -1,0 +1,18 @@
+{
+  "id": "QuickStart/index",
+  "title": "index",
+  "description": "QuickStart",
+  "source": "@site/docs/QuickStart/index.md",
+  "sourceDirName": "QuickStart",
+  "slug": "/QuickStart/",
+  "permalink": "/open-source-web/zh/docs/QuickStart/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/QuickStart/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar": "QuickStartSidebar"
+  },
+  "sidebar": "QuickStartSidebar"
+}

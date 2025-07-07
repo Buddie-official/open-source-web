@@ -1,0 +1,20 @@
+{
+  "id": "TechnicalDocs/HardWare/nihao",
+  "title": "nihao",
+  "description": "asdasdasdasd",
+  "source": "@site/docs/TechnicalDocs/HardWare/nihao.md",
+  "sourceDirName": "TechnicalDocs/HardWare",
+  "slug": "/TechnicalDocs/HardWare/nihao",
+  "permalink": "/open-source-web/zh/docs/TechnicalDocs/HardWare/nihao",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/TechnicalDocs/HardWare/nihao.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "TechnicalDocsSidebar",
+  "previous": {
+    "title": "index",
+    "permalink": "/open-source-web/zh/docs/TechnicalDocs/HardWare/"
+  }
+}

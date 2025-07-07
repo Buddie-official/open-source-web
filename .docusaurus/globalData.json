@@ -1,0 +1,120 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/open-source-web/zh/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/open-source-web/zh/docs",
+          "mainDocId": "Home/home_1",
+          "docs": [
+            {
+              "id": "AboutUs/index",
+              "path": "/open-source-web/zh/docs/AboutUs/",
+              "sidebar": "AboutUsSidebar"
+            },
+            {
+              "id": "Changelog_Blog/Blog/index",
+              "path": "/open-source-web/zh/docs/Changelog_Blog/Blog/",
+              "sidebar": "ChangelogBlogSidebar"
+            },
+            {
+              "id": "Changelog_Blog/Changelog/index",
+              "path": "/open-source-web/zh/docs/Changelog_Blog/Changelog/",
+              "sidebar": "ChangelogBlogSidebar"
+            },
+            {
+              "id": "Changelog_Blog/index",
+              "path": "/open-source-web/zh/docs/Changelog_Blog/",
+              "sidebar": "ChangelogBlogSidebar"
+            },
+            {
+              "id": "greeting",
+              "path": "/open-source-web/zh/docs/greeting"
+            },
+            {
+              "id": "Home/home_1",
+              "path": "/open-source-web/zh/docs/Home/home_1",
+              "sidebar": "HomeSidebar"
+            },
+            {
+              "id": "Home/home_2",
+              "path": "/open-source-web/zh/docs/Home/home_2",
+              "sidebar": "HomeSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/open-source-web/zh/docs/intro"
+            },
+            {
+              "id": "QuickStart/index",
+              "path": "/open-source-web/zh/docs/QuickStart/",
+              "sidebar": "QuickStartSidebar"
+            },
+            {
+              "id": "TechnicalDocs/APP/index",
+              "path": "/open-source-web/zh/docs/TechnicalDocs/APP/",
+              "sidebar": "TechnicalDocsSidebar"
+            },
+            {
+              "id": "TechnicalDocs/FirmWare/index",
+              "path": "/open-source-web/zh/docs/TechnicalDocs/FirmWare/",
+              "sidebar": "TechnicalDocsSidebar"
+            },
+            {
+              "id": "TechnicalDocs/HardWare/index",
+              "path": "/open-source-web/zh/docs/TechnicalDocs/HardWare/",
+              "sidebar": "TechnicalDocsSidebar"
+            },
+            {
+              "id": "TechnicalDocs/HardWare/nihao",
+              "path": "/open-source-web/zh/docs/TechnicalDocs/HardWare/nihao",
+              "sidebar": "TechnicalDocsSidebar"
+            },
+            {
+              "id": "TechnicalDocs/index",
+              "path": "/open-source-web/zh/docs/TechnicalDocs/",
+              "sidebar": "TechnicalDocsSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "HomeSidebar": {
+              "link": {
+                "path": "/open-source-web/zh/docs/Home/home_1",
+                "label": "Home/home_1"
+              }
+            },
+            "QuickStartSidebar": {
+              "link": {
+                "path": "/open-source-web/zh/docs/QuickStart/",
+                "label": "QuickStart/index"
+              }
+            },
+            "TechnicalDocsSidebar": {
+              "link": {
+                "path": "/open-source-web/zh/docs/TechnicalDocs/",
+                "label": "TechnicalDocs/index"
+              }
+            },
+            "ChangelogBlogSidebar": {
+              "link": {
+                "path": "/open-source-web/zh/docs/Changelog_Blog/",
+                "label": "Changelog_Blog/index"
+              }
+            },
+            "AboutUsSidebar": {
+              "link": {
+                "path": "/open-source-web/zh/docs/AboutUs/",
+                "label": "AboutUs/index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "Home/home_1",
+  "title": "home_1",
+  "description": "home_1",
+  "source": "@site/docs/Home/home_1.md",
+  "sourceDirName": "Home",
+  "slug": "/Home/home_1",
+  "permalink": "/open-source-web/zh/docs/Home/home_1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Home/home_1.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar-position": 1
+  },
+  "sidebar": "HomeSidebar",
+  "next": {
+    "title": "home_2",
+    "permalink": "/open-source-web/zh/docs/Home/home_2"
+  }
+}

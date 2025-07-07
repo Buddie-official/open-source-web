@@ -1,0 +1,22 @@
+{
+  "id": "Changelog_Blog/Changelog/index",
+  "title": "index",
+  "description": "ChangelogBlogSidebar",
+  "source": "@site/docs/Changelog_Blog/Changelog/index.md",
+  "sourceDirName": "Changelog_Blog/Changelog",
+  "slug": "/Changelog_Blog/Changelog/",
+  "permalink": "/open-source-web/zh/docs/Changelog_Blog/Changelog/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Changelog_Blog/Changelog/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar": "ChangelogBlogSidebar"
+  },
+  "sidebar": "ChangelogBlogSidebar",
+  "previous": {
+    "title": "index",
+    "permalink": "/open-source-web/zh/docs/Changelog_Blog/Blog/"
+  }
+}
