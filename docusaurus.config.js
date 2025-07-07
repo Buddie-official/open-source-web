@@ -15,24 +15,13 @@ const config = {
   customFields: {
     homepageContent: {
       en: {
-        title: 'BUDDIE',
-        sections: [
-          { title: 'Open Hardware Design', description: 'We provide full access to Buddie’s PCB...' },
-          { title: 'Customizable Firmware', description: 'Built on ESP32-S3, the Buddie firmware supports...' },
-          { title: 'Full Mobile Integration', description: 'We open-sourced the Buddie mobile app...' },
-        ],
+        title: "BUDDIE",
       },
       zh: {
-        title: 'BUDDIE',
-        sections: [
-          { title: '开放的硬件设计', description: '我们公开了 Buddie 耳机的 PCB、原理图与 BOM 表...' },
-          { title: '可自定义的固件系统', description: '基于 ESP32-S3，Buddie 固件支持蓝牙连接、语音处理与 LCD 显示...' },
-          { title: '完整的移动端配套', description: '我们开源了 Buddie App 的核心逻辑，涵盖设备配对、语音控制与用户设置...' },
-        ],
+        title: "BUDDIE",
       },
     },
   },
-
 
   favicon: "img/fig_logo.png",
 
@@ -132,8 +121,8 @@ const config = {
       // Replace with your project's social card
       image: "img/buddie-social-card.jpg",
       colorMode: {
-        defaultMode: 'dark',     // 👈 默认主题为 dark
-        disableSwitch: false,    // 是否禁用切换按钮（true 则用户无法切换）
+        defaultMode: "dark", // 👈 默认主题为 dark
+        disableSwitch: false, // 是否禁用切换按钮（true 则用户无法切换）
         respectPrefersColorScheme: false, // 是否尊重用户系统偏好（这里设为 false 才始终用 dark）
       },
 
@@ -176,6 +165,11 @@ const config = {
           {
             type: "localeDropdown",
             position: "right",
+          },
+          {
+            label: "Community",
+            href: "https://club.bud.inc",
+            position: "left",
           },
         ],
       },
