@@ -1,0 +1,82 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --hero__title_color: #000000;
+  --hero__subtitle_color: #ffffff;
+  
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #00bcd4;
+  --ifm-color-primary-dark: #ffffff;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --hero__title_color: #FFFFFF;
+  --hero__subtitle_color: #ffffff;
+}
+
+
+.hero__title {
+  font-family: 'Times New Roman', serif;
+  font-size: 6rem;
+  font-weight: 600;
+  color: #00bcd4;
+}
+
+.hero__subtitle{
+  font-family:  'Noto Sans SC', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--hero__subtitle_color);
+}
+
+
+.sectionTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;  /* 推荐现代无衬线字体组合 */
+  font-size: 2.5rem;        /* 大标题大小 */
+  font-weight: 700;       /* 加粗 */
+  color: var(--hero__title_color);
+  margin-bottom: 1rem;    /* 和段落之间留空 */
+}
+
+.sectionDescription {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.5rem;        /* 正文大小 */
+  font-weight: 400;       /* 正常粗细 */
+  color: var(--hero__title_color);
+  line-height: 1.6;       /* 行距提高可读性 */
+  /* max-width: 600px;       限制宽度避免太长 */
+  text-align: center;     /* 居中对齐（可选） */
+  margin: 5px auto 10px auto;         /* 水平居中（配合 max-width） */
+}
+
+
+
+
+
+
+
+
+
+
+
