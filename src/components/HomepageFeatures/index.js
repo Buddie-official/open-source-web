@@ -1,44 +1,49 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
 
 const FeatureList = [
   {
-    title: 'Full Mobile Integration',
-    image: require('@site/static/img/home_app_picture.png').default,
+    title: "Mobile Application",
+    image: require("@site/static/img/home_app_picture.png").default,
     description: (
       <>
-        A complete mobile solution for intelligent voice interaction — with open-source AI logic, speech models, and a plug-and-play workflow connecting hardware and app.
+        A complete mobile solution for intelligent AI voice interaction,
+        including open-source AI interaction logic, voice models, and earphone
+        firmware data transmission methods.
       </>
     ),
-    link_url: '/',
+    link_url: "/",
   },
   {
-    title: 'Customizable Firmware',
-    image: require('@site/static/img/home_firmware_picture.png').default,
+    title: "Embedded Firmware Source Code",
+    image: require("@site/static/img/home_firmware_picture.png").default,
     description: (
       <>
-        A full-featured, customizable firmware based on JieLi chips — including audio protocols, compression algorithms, and system control. Seamlessly aligned with the PCB configuration for easy adaptation and expansion.
+        A customizable firmware based on JieLi SoC with audio protocols,
+        compression algorithms, and system control modules.{" "}
       </>
     ),
-    link_url: '/',
+    link_url: "/",
   },
   {
-    title: 'Open Hardware Design',
-    image: require('@site/static/img/home_pcb_picture.png').default,
+    title: "Circuit Design",
+    image: require("@site/static/img/home_pcb_picture.png").default,
     description: (
       <>
-        Full access to PCB layouts, schematics, and BOM files — ready for DIY assembly, rapid prototyping, or custom hardware projects.
+        Fully open-source PCB design. Includes PCB layout files, schematic
+        diagrams, and a complete BOM . Ideal for DIY , quick prototyping, and
+        custom hardware development.{" "}
       </>
     ),
-    link_url: '/',
+    link_url: "/",
   },
 ];
 
-function Feature({image, title, description, link_url}) {
+function Feature({ image, title, description, link_url }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         {/* <Svg className={styles.featureSvg} role="img" /> */}
         <img src={image} className={styles.featureImage} alt={title} />
@@ -48,10 +53,7 @@ function Feature({image, title, description, link_url}) {
         <p>{description}</p>
       </div>
       <div className={styles.buttons}>
-        <Link
-          className="github_button"
-          to = {link_url}
-        >
+        <Link className="github_button" to={link_url}>
           Goto Docs
         </Link>
       </div>
@@ -62,6 +64,20 @@ function Feature({image, title, description, link_url}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
+      <Heading as="h2" className={clsx("hero_othertitle")}>
+      <p className={styles.hero_othertitle}>
+        Buddie's hardware and software have been open-sourced
+      </p>
+      </Heading>
+      <p className={clsx("text__description")}>
+          Buddie’s full technology stack is open and accessible — from earbud
+          schematics and embedded firmware to the complete mobile application
+          codebase.
+      </p>
+      <p className={clsx("text__description")}>
+          We hope these resources help developers learn, improve, and even
+          create their own voice interaction products.
+      </p>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
