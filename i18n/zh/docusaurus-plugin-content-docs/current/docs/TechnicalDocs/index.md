@@ -1,5 +1,0 @@
----
-sidebar: TechnicalDocsSidebar
----
-
-TechnicalDocs

@@ -135,12 +135,6 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "QuickStartSidebar",
-            position: "left",
-            label: "Quick Start",
-          },
-          {
-            type: "docSidebar",
             sidebarId: "TechnicalDocsSidebar",
             position: "left",
             label: "Technical Docs",
@@ -150,12 +144,6 @@ const config = {
             sidebarId: "ChangelogBlogSidebar",
             position: "left",
             label: "Changelog & Blog",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "AboutUsSidebar",
-            position: "left",
-            label: "About Us",
           },
           {
             href: "https://github.com/Buddie-official/open-source-web",
