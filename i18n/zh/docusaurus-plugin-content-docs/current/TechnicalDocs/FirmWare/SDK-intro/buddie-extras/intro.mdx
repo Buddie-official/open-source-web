@@ -1,0 +1,74 @@
+import board_config from '@site/static/img/docs/board_config.png';
+import tasklist from '@site/static/img/docs/tasklist.png';
+import app_main from '@site/static/img/docs/app_main.png'
+
+
+# 新增模块说明以及SDK简要介绍
+
+## 1 SDK 重要文件说明
+
+### 1.1 板级配置
+
+文件位置：`apps\earphone\board\br28\board_config.h`
+在board_config.h中，我们选择 `CONFIG_BOARD_JL7016G_HYBRID`。从而启动如下三个基本配置文件：
+1. `board_jl7016g_hybrid_cfg.h`
+2. `board_jl7016g_hybrid_global_build_cfg.h`
+3. `board_jl7016g_hybrid.c`
+在`board_jl7016g_hybrid_cfg.h`中，我们可以进一步配置UART, IIC, SD等外设的引脚。
+
+<img src={board_config} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+### 1.2 SDK 启动文件
+
+文件位置：`apps\earphone\app_main.c`
+在`app_main.c`中，我们可以看到SDK的启动流程。该文件可以分为两个部分：`task_info task_info_table[]` 和 `app_main()`
+
+1. 首先是`task_info task_info_table[]`，这是一个任务信息表，定义了各个任务的名称, 优先级, 运行时所在的核, 栈大小和堆大小。每个任务都对应一个特定的功能模块。
+
+
+<img src={tasklist} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+2. 接下来是`app_main()`函数，这是SDK的入口函数。它会根据任务信息表中的配置，创建各个任务并启动它们。
+
+<img src={app_main} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+## 2 Buddie 新增模块概述
+
+Buddie 新增模块主要包括以下几个部分：
+1. 说话人检测
+2. 音频数据压缩 (PCA, OPUS)
+3. 蓝牙数据发送与接受 (BLE, SPP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

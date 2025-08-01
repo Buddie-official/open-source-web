@@ -1,0 +1,82 @@
+import firmware_open_vscode from '@site/static/img/docs/firmware_open_vscode.jpg';
+import firmware_vscode_task from '@site/static/img/docs/firmware_vscode_task.jpg';
+import firmware_vscode_c_cpp_ext from '@site/static/img/docs/firmware_vscode_c_cpp_ext.jpg'
+import firmware_vscode_build from '@site/static/img/docs/firmware_vscode_build.jpg'
+import build_ok from '@site/static/img/docs/build_ok.png'
+
+
+# 搭建编译环境
+本项目建议在 Windows 环境下使用 VSCode 进行编译，以下是详细的开发环境配置步骤以及项目文件编译方法。
+
+
+一、配置 Windows 开发环境
+
+该 SDK 项目专为 Windows 系统设计，默认使用 Code::Blocks 作为开发环境，配置流程主要分为以下三个步骤：
+
+1. **下载并安装 Code::Blocks 的 Windows 版本**：可通过链接[Code::Blocks 的 Windows 版本](https://pkgman.jieliapp.com/s/codeblocks) 获取并进行安装。
+2. **首次打开并关闭 Code::Blocks**：完成安装后，首次打开 Code::Blocks，之后立即关闭。这一操作的目的是生成必要的配置文件，为后续的开发工作做好准备。
+3. **下载并安装最新版本的杰理 Windows 工具链**：通过 [最新版本的杰理 Windows 工具链](https://pkgman.jieliapp.com/s/win-toolchain) 获取最新版本并进行安装。
+
+完成以上步骤后，您就可以打开 Code::Blocks 项目，开始编译和开发工作。（推荐使用VSCode进行编译和开发工作）
+
+如果需要更多的工具链和后处理工具，请参考： **[最新工具版本](https://doc.zh-jieli.com/Tools/zh-cn/other_info/index.html)**。
+
+如需获取更详细的程序开发相关工具说明，请点击下方链接：  
+https://doc.zh-jieli.com/Tools/zh-cn/dev_tools/dev_env/index.html
+
+
+二、使用 VSCode 编译 SDK
+
+使用 VSCode 编译 SDK 是通过调用make命令来实现的，具体步骤如下：
+1. 在 SDK 根目录下使用 VSCode 打开项目，操作示意图如下：
+
+<img src={firmware_open_vscode} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+2. 安装必要的扩展插件：**Task Explorer** 和 **C/C++** ，相关示意图如下：
+
+<img src={firmware_vscode_task} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+<img src={firmware_vscode_c_cpp_ext} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+3. 选择对应的任务进行编译：点击 **TASK EXPLORER > SDK > vscode**，即可查看可用的任务列表，其中包括：
+    - **all**：用于编译整个项目
+    - **clean**：用于清除编译输出文件
+    操作示意图如下：
+
+<img src={firmware_vscode_build} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+三、在项目文件根目录下进行编译任务
+
+1.  **获取代码:**
+    ```bash
+    git clone https://github.com/Buddie-AI/Buddie.git
+    cd Buddie/Firmware-JL701N
+    ```
+
+2. 点击 **TASK EXPLORER > SDK > vscode > all**, 即可开始编译。
+3. 成功编译后，会显示 `生成UFW文件 jl_isd.ufw`。如下图所示：
+
+<img src={build_ok} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,6 @@
---- 
-id: FirmWare-index 
---- 
+---
+id: FirmWare-index
+---
 
-中文
 
 FirmWare

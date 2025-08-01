@@ -84,3 +84,13 @@
   font-size: 1.2rem;
   color: var(--font-hero-card-color);
 }
+
+
+
+/* Custom styles for docs */
+.docs_img{
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

@@ -21,13 +21,30 @@ const sidebars = {
   TechnicalDocsSidebar: [
     {
       type: "category",
-      label: "你好",
+      label: "快速上手",
       items: [
-        "TechnicalDocs/index",
-        "TechnicalDocs/FirmWare/FirmWare-index",
+        "TechnicalDocs/FirmWare/quickstart/preparation",
+        "TechnicalDocs/FirmWare/quickstart/build",
+        "TechnicalDocs/FirmWare/quickstart/flash",
+      ],
+    },
+    {
+      type: "category",
+      label: "SDK介绍",
+      items: [
+        "TechnicalDocs/FirmWare/SDK-intro/JL-docs",
+        {
+          type: "category",
+          label: "Buddie 新增模块",
+          items: [
+            "TechnicalDocs/FirmWare/SDK-intro/buddie-extras/intro",
+            "TechnicalDocs/FirmWare/SDK-intro/buddie-extras/vad",
+          ],
+        }
       ],
     },
   ],
+
   ChangelogBlogSidebar: [
     {
       type: "category",
