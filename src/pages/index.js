@@ -26,14 +26,10 @@ function HomepageHeader() {
           {siteConfig.customFields.homepageContent.en.title}
         </Heading>
         <p className="hero__subtitle">
-          We are committed to building intelligent voice interaction systems 
-          for the AGI era, offering complete technical solutions and integrated
-          hardware-software codesign.
+          Build the buddie that gets you.
         </p>
         <p className="hero__subtitle">
-          As an open developer platform, we promote the real-world application
-          of voice technologies and encourage collaboration to explore new
-          possibilities in the AGI era.
+          Buddie is an open-source toolkit to build your own AI voice companion. Create a partner that's truly in sync with you—listening, learning, and growing by your side.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -56,27 +52,23 @@ function HomepageWorkDisplay() {
     <div className={styles.workShow}>
       <div className={styles.workShowTitle}>
         <Heading as="h2" className={clsx("hero_othertitle")}>
-          Creating an Ecosystem for AI-Powered Voice Interaction
+          Craft your perfect 'Her' with buddie!
         </Heading>
       </div>
       <div className={styles.workCardrow}>
         <div className={styles.workCard}>
           <div className={styles.cardText}>
             <cardTitletext className={clsx("card__tile")}>
-              Versatile AI Voice Hardware Solution{" "}
+              End-to-End AI Voice Solutions{" "}
             </cardTitletext>
           </div>
           <div className={styles.cardDescription}>
             <cardText className={clsx("card__text")}>
-              We focus on the field of AI voice interaction, developing a
-              variety of smart terminal products such as smart speakers and
-              children’s safety wristbands. Through integrated hardware and
-              software design, we’re dedicated to building smart and secure
-              products that users can trust.
+We specialize in conversational AI. By seamlessly merging our proprietary software with custom-built hardware, we deliver vertically integrated solutions for a diverse range of smart devices.
             </cardText>
             <div className={styles.cardImage}>
               <img
-                src="img/products.png"
+                src="img/1-home.png"
                 alt="Hardware Solution"
                 style={{
                   width: "100%",
@@ -92,12 +84,12 @@ function HomepageWorkDisplay() {
         <div className={styles.workCard}>
           <div className={styles.cardText}>
             <cardTitletext className={clsx("card__tile")}>
-              Integration of MCP services            
+              Innovative Interaction Engine for Precision Services     
             </cardTitletext>
           </div>
           <div className={styles.cardDescription}>
             <cardText className={clsx("card__text")}>
-By integrating speech recognition, content summarization, MCP services, and language models, we have developed a practical intelligent interaction system that covers the full pipeline from voice input to output.
+Powered by buddie's proprietary interaction model and seamlessly integrated MCP service engine, you get precision-driven AI that adapts to your unique requirements. 
             </cardText>
             <div className={styles.cardImage}>
               <img
@@ -117,12 +109,12 @@ By integrating speech recognition, content summarization, MCP services, and lang
         <div className={styles.workCard}>
           <div className={styles.cardText}>
             <cardTitletext className={clsx("card__tile")}>
-              Automated Firmware Development Platform
+              Automated Firmware Platform. Deploy anywhere instantly
             </cardTitletext>
           </div>
           <div className={styles.cardDescription}>
             <cardText className={clsx("card__text")}>
-We have built an automated firmware development platform for embedded devices, supporting an integrated workflow from code editing and building to multi-platform deployment.
+Our embedded firmware automation platform revolutionizes development with end-to-end workflow automation. delivering up to 10x faster development cycles and dramatically reduced time-to-market.
             </cardText>
             <div className={styles.cardImage}>
               <img

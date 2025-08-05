@@ -26,17 +26,17 @@ function HomepageHeader() {
           {siteConfig.customFields.homepageContent.en.title}
         </Heading>
         <p className="hero__subtitle">
-          我们致力于打造面向 AGI 时代的智能语音交互系统，提供完整的技术方案、软硬件协同设计。
+          打造更懂你的语音伙伴
         </p>
         <p className="hero__subtitle">
-作为一个开放的开发者平台，我们不仅推动技术的普及与落地，也鼓励开发者之间的协作、分享与交流，共同探索通用人工智能背景下的语音交互新范式。
+Buddie 是一个开源AI语音软硬件解决方案，致力于帮助每个人轻松定制专属的AI伙伴。让他听你所言，思你所想，与你共同成长。
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="docs/TechnicalDocs/intro"
           >
-            Quick Start
+            快速开始
           </Link>
         </div>
       </div>
@@ -52,23 +52,23 @@ function HomepageWorkDisplay() {
     <div className={styles.workShow}>
       <div className={styles.workShowTitle}>
         <Heading as="h2" className={clsx("hero_othertitle")}>
-          打造 AI 语音交互生态圈
+          使用buddie创造专属于你的'Her'！
         </Heading>
       </div>
       <div className={styles.workCardrow}>
         <div className={styles.workCard}>
           <div className={clsx("card__text")}>
             <cardTitletext className={clsx("card__tile")}>
-              多场景 AI 语音交互硬件解决方案
+              全场景 AI 语音软硬件解决方案
             </cardTitletext>
           </div>
           <div className={styles.cardDescription}>
             <cardText className={clsx("card__text")}>
-我们专注于 AI 语音交互领域，打造涵盖智能音箱、儿童护手环等多种形态的智能终端产品。通过软硬件一体化设计，我们致力于提供既智能又安全的用户体验。
+Buddie专注于 AI 语音交互技术，为智能音箱、儿童可穿戴设备等多样化的硬件产品，提供从软件到硬件的垂直整合方案。我们确保每一次交互都兼具智能、流畅与安全。
             </cardText>
             <div className={styles.cardImage}>
               <img
-                src="img/products.png"
+                src="img/1-home.png"
                 alt="Hardware Solution"
                 style={{
                   height: "100%",
@@ -85,12 +85,12 @@ function HomepageWorkDisplay() {
         <div className={styles.workCard}>
           <div className={styles.cardText}>
             <cardTitletext className={clsx("card__tile")}>
-              融合 MCP 服务能力的多模态智能交互系统       
+              创新交互引擎，赋能精准服务   
             </cardTitletext>
           </div>
           <div className={styles.cardDescription}>
             <cardText className={clsx("card__text")}>
-通过语音识别、内容摘要、MCP 服务与对话模型集成，我们打造了一套可落地的智能交互系统，覆盖从语音输入到语义输出的完整链路，适用于办公协作、客户服务与知识管理等多种场景。
+Buddie搭载自主研发的新一代交互模型，深度集成MCP服务引擎，为用户提供高度个性化的智能交互体验。您可以根据具体需求灵活定制功能模块，打造专属于您的智能助手。
             </cardText>
             <div className={styles.cardImage}>
               <img
@@ -116,7 +116,7 @@ function HomepageWorkDisplay() {
           </div>
           <div className={styles.cardDescription}>
             <cardText className={clsx("card__text")}>
-我们构建了一套面向嵌入式设备的自动化固件开发平台，支持从代码编辑、构建到多平台部署的一体化流程。通过模块化架构与脚本自动化，用户可快速适配不同芯片与硬件平台，大幅提升开发效率与交付速度。
+我们打造了专业的嵌入式固件自动化开发平台，实现从代码编写、构建编译到多平台部署的全流程自动化。让开发者轻松适配各类芯片与硬件平台，将固件开发效率提升数倍，显著缩短产品上市周期。
             </cardText>
             <div className={styles.cardImage}>
               <img

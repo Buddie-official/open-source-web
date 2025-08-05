@@ -5,13 +5,11 @@ import Link from "@docusaurus/Link";
 
 const FeatureList = [
   {
-    title: "Mobile Application",
+    title: "Smart Voice Mobile Application",
     image: require("@site/static/img/home_app_picture.png").default,
     description: (
       <>
-        A complete mobile solution for intelligent AI voice interaction,
-        including open-source AI interaction logic, voice models, and earphone
-        firmware data transmission methods.
+Complete AI voice interaction solution! Open-source AI interaction logic, voice models, seamless firmware data transmission—all-in-one intelligent voice experience!
       </>
     ),
     link_url: "/",
@@ -21,20 +19,17 @@ const FeatureList = [
     image: require("@site/static/img/home_firmware_picture.png").default,
     description: (
       <>
-        A customizable firmware based on JieLi SoC with audio protocols,
-        compression algorithms, and system control modules.{" "}
+Full-featured customizable firmware for JieLi chips! Integrated audio protocols, compression algorithms, and system control modules.
       </>
     ),
     link_url: "/",
   },
   {
-    title: "Circuit Design",
+    title: "Circuit Design Schematics",
     image: require("@site/static/img/home_pcb_picture.png").default,
     description: (
       <>
-        Fully open-source PCB design. Includes PCB layout files, schematic
-        diagrams, and a complete BOM . Ideal for DIY , quick prototyping, and
-        custom hardware development.{" "}
+Fully open PCB design! Complete circuit layouts, schematics, and BOM lists—perfect for DIY assembly, rapid prototyping, or custom hardware development!
       </>
     ),
     link_url: "/",
@@ -66,17 +61,11 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <Heading as="h2" className={clsx("hero_othertitle")}>
       <p className={styles.hero_othertitle}>
-        Buddie's hardware and software have been open-sourced
+        Explore Buddie's Complete Tech Stack Freely!
       </p>
       </Heading>
       <p className={clsx("text__description")}>
-          Buddie’s full technology stack is open and accessible — from earbud
-          schematics and embedded firmware to the complete mobile application
-          codebase.
-      </p>
-      <p className={clsx("text__description")}>
-          We hope these resources help developers learn, improve, and even
-          create their own voice interaction products.
+Circuit schematics, embedded firmware source, mobile APP code—all open access! Learn, improve, create—build your own voice interaction product starting right here!
       </p>
       <div className="container">
         <div className="row">

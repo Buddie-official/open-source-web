@@ -5,11 +5,11 @@ import Link from "@docusaurus/Link";
 
 const FeatureList = [
   {
-    title: "移动端应用",
+    title: "智能语音移动端APP",
     image: require("@site/static/img/home_app_picture.png").default,
     description: (
       <>
-一个面向智能AI语音交互的完整移动端解决方案，包含开源的 AI 交互逻辑、语音模型，以及与耳机固件的数据传输方式。
+完整的 AI 语音交互解决方案，开源 AI 交互逻辑、语音模型，无缝对接嵌入式固件数据传输——一站式智能语音体验！
       </>
     ),
     link_url: "/",
@@ -19,7 +19,7 @@ const FeatureList = [
     image: require("@site/static/img/home_firmware_picture.png").default,
     description: (
       <>
-基于杰理芯片的全功能可定制固件。内含音频协议、压缩算法与系统控制模块，固件设计与 PCB 配置无缝对齐，便于适配和扩展。
+杰理芯片全功能定制固件。集成音频协议、压缩算法、系统控制模块，与 PCB 完美匹配，轻松适配扩展！
       </>
     ),
     link_url: "/",
@@ -29,7 +29,7 @@ const FeatureList = [
     image: require("@site/static/img/home_pcb_picture.png").default,
     description: (
       <>
-完全开放的 PCB 设计。提供电路板布局图、原理图和 BOM 物料清单。适用于 DIY 装配、快速打样或个性化硬件开发。
+完全开放的 PCB 设计！电路布局图、原理图、BOM 清单全公开，DIY 装配、快速打样、个性化开发，随心所欲！
       </>
     ),
     link_url: "/",
@@ -61,14 +61,11 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <Heading as="h2" className={clsx("hero_othertitle")}>
       <p className={styles.hero_othertitle}>
-        Buddie 的硬件与软件，现已开源
+        自由探索 Buddie 完整技术栈！
       </p>
       </Heading>
       <p className={clsx("text__description")}>
-你可以自由访问 Buddie 的完整技术栈，包括耳机的电路设计图、嵌入式固件源码，以及移动端应用的全部代码。
-      </p>
-      <p className={clsx("text__description")}>
-我们希望这些资源能帮助开发者学习、改进，甚至打造属于自己的语音交互产品。
+电路设计图、嵌入式固件源码、移动端APP代码全部开放！学习、改进、创造，打造你的专属语音交互产品，就从这里开始！
       </p>
       <div className="container">
         <div className="row">
