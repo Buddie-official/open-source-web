@@ -1,0 +1,34 @@
+import firmware_board_connect from '@site/static/img/docs/firmware_board_connect.jpg';
+import firmware_flashing from '@site/static/img/docs/firmware_flashing.png';
+
+
+
+# Flashing Firmware Using the Forced Download Tool
+## 1. Connecting the Computer and Development Board
+
+Connect the USB female port of the forced download tool to your computer, and the USB male port to the prototype or development board.
+(**Note:** Do not connect in reverse. Please refer to the image below for the correct connection.)
+
+1. The specific steps are as follows:
+   1. Connect the devices correctly according to the instructions in the image.
+   2. The green and red lights on the forced download tool will start flashing.
+   3. Press the button on the forced download tool—the green light will turn off and the red light will stay on.
+   4. At this point, you can flash the program to the development board.
+
+<img src={firmware_board_connect} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+**For more detailed information, please refer to:** [**Upgrade and Download Instructions**](https://doc.zh-jieli.com/Tools/zh-cn/dev_tools/forced_upgrade/upgrade_and_download.html).
+
+
+
+
+## 2. Flashing the Firmware
+
+After connecting the computer and development board, press the button on the forced download tool. When the green light is off and the red light is on, you can start flashing.
+
+1. Click **TASK EXPLORER > SDK > vscode > all** to automatically execute the build and flash tasks.
+
+2. When the terminal shows that the UFW file has been generated, the flashing is complete.
+3. Press the button on the forced download tool again; the green and red lights will start flashing, and the development board will run the flashed program.
+
+<img src={firmware_flashing} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />

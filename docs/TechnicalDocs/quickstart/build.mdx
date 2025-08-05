@@ -1,0 +1,60 @@
+import firmware_open_vscode from '@site/static/img/docs/firmware_open_vscode.jpg';
+import firmware_vscode_task from '@site/static/img/docs/firmware_vscode_task.jpg';
+import firmware_vscode_c_cpp_ext from '@site/static/img/docs/firmware_vscode_c_cpp_ext.jpg'
+import firmware_vscode_build from '@site/static/img/docs/firmware_vscode_build.jpg'
+import build_ok from '@site/static/img/docs/build_ok.png'
+
+
+# Setting Up the Build Environment
+It is recommended to use VSCode for compiling this project under Windows. Below are detailed steps for configuring the development environment and compiling the project files.
+
+
+1. Configure the Windows Development Environment
+
+This SDK project is designed specifically for Windows systems, with Code::Blocks as the default development environment. The configuration process mainly consists of the following three steps:
+
+1. **Download and install the Windows version of Code::Blocks**: You can get it from [Code::Blocks Windows Version](https://pkgman.jieliapp.com/s/codeblocks) and install it.
+2. **Open and close Code::Blocks for the first time**: After installation, open Code::Blocks for the first time and then close it immediately. This operation is to generate the necessary configuration files for subsequent development work.
+3. **Download and install the latest version of the JieLi Windows toolchain**: Get the latest version from [Latest JieLi Windows Toolchain](https://pkgman.jieliapp.com/s/win-toolchain) and install it.
+
+After completing the above steps, you can open the Code::Blocks project and start compiling and developing. (It is recommended to use VSCode for compiling and development.)
+
+If you need more toolchains and post-processing tools, please refer to: **[Latest Tool Versions](https://doc.zh-jieli.com/Tools/zh-cn/other_info/index.html)**.
+
+For more detailed instructions on development tools, please visit:  
+https://doc.zh-jieli.com/Tools/zh-cn/dev_tools/dev_env/index.html
+
+
+2. Compile the SDK Using VSCode
+
+Compiling the SDK with VSCode is done by invoking the make command. The specific steps are as follows:
+1. Open the project in the SDK root directory using VSCode, as shown below:
+
+<img src={firmware_open_vscode} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+2. Install the necessary extensions: **Task Explorer** and **C/C++**. See the images below:
+
+<img src={firmware_vscode_task} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+<img src={firmware_vscode_c_cpp_ext} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+3. Select the corresponding task to compile: Click **TASK EXPLORER > SDK > vscode** to view the available task list, which includes:
+    - **all**: to build the entire project
+    - **clean**: to clean the build output files
+    See the image below:
+
+<img src={firmware_vscode_build} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+3. Run Build Tasks in the Project Root Directory
+
+1.  **Get the code:**
+    ```bash
+    git clone https://github.com/Buddie-AI/Buddie.git
+    cd Buddie/Firmware-JL701N
+    ```
+
+2. Click **TASK EXPLORER > SDK > vscode > all** to start compiling.
+3. After a successful build, you will see `生成UFW文件 jl_isd.ufw` ("UFW file jl_isd.ufw generated") as shown below:
+
+<img src={build_ok} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />

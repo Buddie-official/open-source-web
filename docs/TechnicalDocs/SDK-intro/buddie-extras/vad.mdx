@@ -1,0 +1,46 @@
+import vad_init from '@site/static/img/docs/vad_init.png'
+import vad_task from '@site/static/img/docs/vad_task.png'
+
+# Speaker Detection Module
+
+The Buddie earphones have a built-in gyroscope sensor that implements voice activity detection by analyzing z-axis vibration data.
+
+File locations:
+1. `lis2de12.c`
+2. `lis2de12.h`
+3. `lis2de12_driver.c`
+4. `lis2de12_driver.h`
+
+Below we will briefly introduce this module according to the order of earphone operation
+
+
+
+| Function Entry       | Function Description                         | File Location               |
+|:------------:|:-------------------------------:|:--------------------:|
+| bone_task_init()       | SPI peripheral initialization, and register vad_task and callback function | apps\earphone\app_main.c         |
+| bone_task_timer_cb()       | Read sensor data                 | apps\common\device\gSensor\lis2de12.c           |
+| vad_task()       | Execute trigger task                 | apps\common\device\gSensor\lis2de12.c           |
+
+
+
+## 1 Entry Function and Task List
+
+File location: `apps\earphone\app_main.c -> app_main() -> bone_task_init()`
+This function will execute the following steps:
+1. Register SPI peripheral and start the sensor peripheral.
+2. Create `"vad_task"` task. (Note: the vad_task needs to be manually registered in task_info task_info_table[] before compilation)
+3. Add timer task and callback function to collect z-axis data
+
+<img src={vad_init} alt="firmware" width="100%" style={{ display: 'block', margin: '0 auto' }} />
+
+## 2 vad_task() 
+ 
+File location: `apps\common\device\gSensor\lis2de12.c`
+This function will execute the following steps:
+1. Perform FFT operation on the phone's z-axis data to obtain frequency domain data
+2. Analyze the frequency domain data to obtain voice trigger threshold
+
+<img src={vad_task} alt="firmware" width="100%" style={{ display: 'block', margin: '0 auto' }} />
+
+
+

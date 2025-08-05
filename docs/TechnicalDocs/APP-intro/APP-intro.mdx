@@ -1,0 +1,224 @@
+# Build an LLM Application
+
+This section will introduce how to quickly build an LLM application for text interaction using the existing code framework.
+
+## How to Implement
+
+`base_llm.dart` is the base abstraction layer that doesn't depend on specific implementations, only defines interface standards, and reserves multimodal support (such as audio input/output), while also including UI display-related helper functions.
+
+- Defines `LLMType` enum, including `customLLM` and `qwenOmni` two types.
+- Implements `LLMTypeExtension` for providing model icons, colors, and display names and other UI-related functionality.
+- Defines `LLMConfig` configuration class, supporting custom model parameters.
+- Defines `BaseLLM` abstract base class, specifying interfaces that all LLM implementations must support.
+
+**Main interfaces include:**
+```dart
+initialize() // Initialize LLM (load configuration, establish connection)
+dispose() // Release resources
+createRequest() // Synchronous text request
+createStreamingRequest() // Streaming text request
+createStreamingRequestWithAudio() // Streaming request with audio (throws unsupported exception by default)
+```
+
+
+llm_factory.dart is the factory and management layer, using singleton pattern to manage LLM instance lifecycle, intelligently selecting the most suitable LLM type based on configuration and availability, supporting LLM type switching and configuration reloading, providing LLM status query and feature detection services.
+Key interfaces include:
+```dart
+getCurrentLLM() // Get current LLM instance (created on demand)
+getLLM() // Get specified type LLM instance
+switchToLLMType() // Switch to specified LLM type
+reloadLLMConfig() // Reload configuration
+isLLMAvailable() // Check if specified LLM type is available
+getAvailableLLMTypes() // Get all available LLM types
+```
+
+custom_llm.dart is the concrete implementation class for user-defined large language models, implementing functions such as loading user configuration, creating streaming and non-streaming requests, and processing return formats.
+Key interfaces include:
+```dart
+initialize() // Initialize and load user configuration
+createRequest() // Non-streaming request
+createStreamingRequest() // Streaming request
+```
+
+qwen_omni_llm.dart is the concrete implementation class for multimodal language models, implementing Alibaba Cloud Tongyi Qianwen Omni multimodal API calls, processing audio input/output (WAV format), supporting streaming text responses and streaming responses with audio, and automatically handling Base64 audio encoding/decoding.
+Key interfaces include:
+```dart
+createStreamingRequestWithAudio() // Audio request processing
+```
+
+unified_chat_manager.dart is the upper-level service, providing unified chat interface, masking underlying LLM differences, automatically building input content with context, automatically managing chat session history and state, supporting persistence, loading and filtering of historical records.
+Key interfaces include:
+```dart
+init() // Initialize chat manager
+createStreamingRequest() // Create text streaming request
+createStreamingRequestWithAudio() // Create streaming request with audio
+buildInput() // Build input with historical records
+addChatSession() // Add chat session
+```
+
+## How to Build Custom LLM with UnifiedChatManager
+
+### How to Set Up Custom LLM
+
+#### Create env file
+Create an env file in the project root directory (at the same level as pubspec.yaml):
+```bash
+# Execute in project root directory
+touch env
+```
+
+#### Configure environment variables
+Add the following configuration to the env file, replacing the example values with your actual API keys:
+
+```bash
+# Custom LLM configuration (OpenAI compatible)
+DEFAULT_LLM_TOKEN=your_openai_api_key_here
+DEFAULT_LLM_URL=https://api.openai.com/v1/chat/completions
+DEFAULT_LLM_MODEL=gpt-4o
+
+# Alibaba Cloud DashScope API Key (for QwenOmni multimodal)
+DEFAULT_ALIBABA_API_KEY=your_alibaba_dashscope_api_key_here
+
+# Tencent Cloud ASR configuration (for cloud speech recognition)
+DEFAULT_TENCENT_SECRET_ID=your_tencent_secret_id_here
+DEFAULT_TENCENT_SECRET_KEY=your_tencent_secret_key_here
+DEFAULT_TENCENT_TOKEN=your_tencent_token_here
+
+# OpenAI TTS configuration (for speech synthesis)
+DEFAULT_OPENAI_TTS_BASE_URL=https://api.openai.com/v1/audio/speech
+```
+
+### How to Call and Obtain Results
+```dart
+Follow the example below to make calls and create text requests:
+// Initialize manager
+final manager = UnifiedChatManager();
+await manager.init(systemPrompt: "You are a professional assistant");
+
+// Streaming text conversation
+final stream = manager.createStreamingRequest(text: "Hello");
+stream.listen((response) => print(response));
+
+// Non-streaming text conversation
+final response = manager.createRequest(text: "Hello");
+print(response)
+```
+
+### How to Maintain Conversation Context
+By default, when using createStreamingRequest to call streaming text requests, the buildInput function will be automatically called to combine all historical information into one message. buildInput reads ChatSession, so you need to manually call addChatSession to add historical sessions, as follows:
+```dart
+// Initialize manager
+final manager = UnifiedChatManager();
+await manager.init(systemPrompt: "You are a professional assistant");
+
+// Add historical records
+manager.addChatSession('user', "Hello");
+manager.addChatSession('assistant', "How can I help you?");
+
+// Streaming text conversation
+final stream = manager.createStreamingRequest(text: "How's the weather today?");
+stream.listen((response) => print(response));
+```
+
+### How to Use Qwen Omni
+Follow the example below to make calls and create requests that include both audio and text:
+```dart
+// Initialize manager
+final manager = UnifiedChatManager();
+await manager.init(systemPrompt: "You are a professional assistant");
+
+// Audio conversation
+final audioStream = manager.createStreamingRequestWithAudio(
+    audioData: audioBytes,
+    userMessage: text,
+);
+audioStream.listen((response) => print(response));
+```
+Note: createStreamingRequestWithAudio will also automatically read ChatSession by default to build text context.
+
+
+# ASR
+## How We Implement It
+For classic Bluetooth, we use AudioRecorder to implement microphone recording, dependencies:
+```dart
+dependencies:
+    record: ^5.1.2
+```
+
+For low-power Bluetooth, we designed a BleService class specifically for low-power Bluetooth voice data transmission. It provides low-power Bluetooth device connection, data transmission and state management, dependencies:
+```dart
+dependencies:
+    flutter_foreground_task: 8.13.0
+    flutter_blue_plus: ^1.34.5
+```
+
+Key interfaces include:
+```dart
+init() // Initialize service, get saved deviceRemoteId, auto-reconnect if exists
+getAndConnect() // Actively get deviceRemoteId and connect
+listenToConnectionState() // Listen to Bluetooth connection state changes
+forgetDevice() // Forget device: disconnect and clear saved device information
+dispose() // Release resources, cancel subscriptions and close data stream
+```
+
+Key members:
+```dart
+final StreamController<Uint8List> _dataController = StreamController<Uint8List>();
+Stream<Uint8List> get dataStream => _dataController.stream;
+External parties obtain transmission data from low-power Bluetooth devices by listening to dataStream.
+```
+
+## How to Record Audio
+### Using Classic Bluetooth for Voice Data Transmission or Direct Phone Microphone Recording
+After obtaining microphone permissions, follow the example below to turn on the microphone:
+```dart
+// Configure microphone parameters, example only
+const config = RecordConfig(
+    encoder: AudioEncoder.pcm16bits,
+    sampleRate: 16000,
+    numChannels: 1,
+);
+
+// Turn on microphone
+final recorder = AudioRecorder();
+final recordStream = await recorder.startStream(config);
+recordStream.listen((data) {
+    ...
+});
+```
+
+### Using Low-Power Bluetooth for Voice Data Transmission
+After connecting with low-power Bluetooth devices, follow the example below to listen for data:
+```dart
+await BleService().init();
+final bleDataSubscription = BleService().dataStream.listen((value) {
+    ...
+});
+```
+
+# TTS
+
+## How to Implement
+Using Flutter TTS to use the phone's local text-to-speech module, dependencies:
+```dart
+dependencies:
+    flutter_tts: ^4.0.2
+```
+For specific implementation details, refer to the [flutter_tts official documentation](https://pub.dev/packages/flutter_tts).
+
+## How to Use
+Example code is as follows:
+```dart
+// Initialize
+final flutterTts = FlutterTts();
+await _flutterTts.awaitSpeakCompletion(true);
+if (Platform.isAndroid) {
+  await _flutterTts.setQueueMode(1);
+}
+
+// Call text-to-speech
+flutterTts.speak("Hello, this is a text-to-speech test.");
+
+// Interrupt or stop speech synthesis
+flutterTts.stop();
+```

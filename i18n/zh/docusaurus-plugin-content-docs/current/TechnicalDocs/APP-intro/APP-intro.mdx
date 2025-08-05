@@ -1,0 +1,225 @@
+# 构建 LLM 应用
+
+本节介绍如何利用现有代码框架，快速构建用于文本交互的 LLM 应用。
+
+## 工作原理
+
+`base_llm.dart` 是基础抽象层，不依赖于任何具体实现，仅定义接口规范，预留多模态支持（如音频输入/输出），并包含与 UI 展示相关的辅助函数。
+
+- 定义了 `LLMType` 枚举，包括 `customLLM` 和 `qwenOmni` 两种类型。
+- 实现了 `LLMTypeExtension`，用于提供模型图标、颜色、显示名称等 UI 相关功能。
+- 定义了 `LLMConfig` 配置类，支持自定义模型参数。
+- 定义了 `BaseLLM` 抽象基类，规定所有 LLM 实现必须支持的接口。
+
+**主要接口包括：**
+```dart
+initialize() // 初始化 LLM（加载配置、建立连接）
+dispose() // 释放资源
+createRequest() // 同步文本请求
+createStreamingRequest() // 流式文本请求
+createStreamingRequestWithAudio() // 带音频的流式请求（默认抛出不支持异常）
+```
+
+
+llm_factory.dart 为工厂与管理层，使用单例模式管理 LLM 实例生命周期，根据配置和可用性智能选择最合适的 LLM 类型，支持 LLM 类型切换与配置重载，提供 LLM 状态查询和功能检测服务。
+关键接口包括：
+```dart
+getCurrentLLM() // 获取当前 LLM 实例（按需创建）
+getLLM() // 获取指定类型 LLM 实例
+switchToLLMType() // 切换到指定 LLM 类型
+reloadLLMConfig() // 重新加载配置
+isLLMAvailable() // 检查指定 LLM 类型是否可用
+getAvailableLLMTypes() // 获取所有可用 LLM 类型
+```
+
+custom_llm.dart 为用户自定义大语言模型的具体实现类，实现了加载用户配置，创建流式和非流式请求，处理返回格式等功能。
+关键接口包括：
+```dart
+initialize() // 初始化并加载用户配置
+createRequest() // 非流式请求
+createStreamingRequest() // 流式请求
+```
+
+qwen_omni_llm.dart 为多模态语言模型的具体实现类，实现阿里云通义千问 Omni 多模态 API 调用，处理音频输入输出（WAV 格式），支持流式文本响应和带音频的流式响应，能够自动处理 Base64 音频编解码。
+关键接口包括：
+```dart
+createStreamingRequestWithAudio() // 音频请求处理
+```
+
+unified_chat_manager.dart 为上层服务，提供统一的聊天接口，屏蔽底层 LLM 差异，自动构建包含上下文的输入内容，自动管理聊天会话历史和状态，支持历史记录的持久化、加载和过滤。
+关键接口包括：
+```dart
+init() // 初始化聊天管理器
+createStreamingRequest() // 创建文本流式请求
+createStreamingRequestWithAudio() // 创建带音频的流式请求
+buildInput() // 构建包含历史记录的输入
+addChatSession() // 添加聊天记录
+```
+
+## 如何使用 UnifiedChatManager 构建自定义 LLM
+
+### 如何设置自定义 LLM
+
+#### 创建 env 文件
+在项目根目录创建 env 文件（与 pubspec.yaml 同级）：
+```bash
+# 在项目根目录执行
+touch env
+```
+
+#### 配置环境变量
+在 env 文件中添加以下配置，将示例值替换为您的实际API keys：
+
+```bash
+# 自定义LLM配置 (OpenAI兼容)
+DEFAULT_LLM_TOKEN=your_openai_api_key_here
+DEFAULT_LLM_URL=https://api.openai.com/v1/chat/completions
+DEFAULT_LLM_MODEL=gpt-4o
+
+# 阿里云DashScope API Key (用于QwenOmni多模态)
+DEFAULT_ALIBABA_API_KEY=your_alibaba_dashscope_api_key_here
+
+# 腾讯云ASR配置 (用于云端语音识别)
+DEFAULT_TENCENT_SECRET_ID=your_tencent_secret_id_here
+DEFAULT_TENCENT_SECRET_KEY=your_tencent_secret_key_here
+DEFAULT_TENCENT_TOKEN=your_tencent_token_here
+
+# OpenAI TTS配置 (用于语音合成)
+DEFAULT_OPENAI_TTS_BASE_URL=https://api.openai.com/v1/audio/speech
+```
+
+###如何调用并获取结果
+```dart
+按照下方示例进行调用，创建文本请求：
+// 初始化管理器
+final manager = UnifiedChatManager();
+await manager.init(systemPrompt: "你是一个专业助手");
+
+// 流式文本对话
+final stream = manager.createStreamingRequest(text: "你好");
+stream.listen((response) => print(response));
+
+// 非流式文本对话
+final response = manager.createRequest(text: "你好");
+print(response);
+```
+
+###如何维护对话上下文
+默认情况下，在使用 createStreamingRequest 调用流式文本请求时，会自动调用函数 buildInput ，将所有历史信息组合成一条message，buildInput 会读取ChatSession，因此需要手动调用 addChatSession 来添加历史会话，如下：
+```dart
+// 初始化管理器
+final manager = UnifiedChatManager();
+await manager.init(systemPrompt: "你是一个专业助手");
+
+// 添加历史记录
+manager.addChatSession('user', "你好");
+manager.addChatSession('assistant', "请问有什么可以帮助你的吗？");
+
+// 流式文本对话
+final stream = manager.createStreamingRequest(text: "今天天气怎么样");
+stream.listen((response) => print(response));
+```
+
+###如何使用Qwen Omni
+按照下方示例进行调用，创建同时包含音频和文本的请求：
+```dart
+// 初始化管理器
+final manager = UnifiedChatManager();
+await manager.init(systemPrompt: "你是一个专业助手");
+
+// 音频对话
+final audioStream = manager.createStreamingRequestWithAudio(
+    audioData: audioBytes,
+    userMessage: text,
+);
+audioStream.listen((response) => print(response));
+```
+注意，createStreamingRequestWithAudio 也会默认自动读取ChatSession来构建文本上下文。
+
+
+#ASR
+##我们如何实现它
+对于经典蓝牙，借助AudioRecorder实现麦克风录音，依赖：
+```dart
+dependencies:
+    record: ^5.1.2
+```
+
+对于低功耗蓝牙，我们设计了一个专门用于低功耗蓝牙语音数据传输的类 BleService 。提供低功耗蓝牙设备连接、数据传输和状态管理，依赖：
+```dart
+dependencies:
+    flutter_foreground_task: 8.13.0
+    flutter_blue_plus: ^1.34.5
+```
+
+关键接口包括：
+```dart
+init() // 初始化服务，获取保存的 deviceRemoteId，若存在则自动重连
+getAndConnect() // 主动获取 deviceRemoteId 并连接
+listenToConnectionState() // 监听蓝牙连接状态变化
+forgetDevice() // 忘记设备：断开并清除保存的设备信息
+dispose() // 释放资源，取消订阅并关闭数据流
+```
+
+关键成员为：
+```dart
+final StreamController<Uint8List> _dataController = StreamController<Uint8List>();
+Stream<Uint8List> get dataStream => _dataController.stream;
+外部通过监听 dataStream 来获得低功耗蓝牙设备的传输数据。
+```
+
+## 如何录音
+###使用经典蓝牙传输语音数据或手机麦克风直接录音
+在获取了麦克风权限后，按照以下示例打开麦克风：
+```dart
+// 配置麦克风参数，以下仅作示例
+const config = RecordConfig(
+    encoder: AudioEncoder.pcm16bits,
+    sampleRate: 16000,
+    numChannels: 1,
+);
+
+// 打开麦克风
+final recorder = AudioRecorder();
+final recordStream = await recorder.startStream(config);
+recordStream.listen((data) {
+    ...
+});
+```
+
+##使用低功耗蓝牙传输语音数据
+在与低功耗蓝牙设备连接完成后，按照以下示例监听数据：
+```dart
+await BleService().init();
+final bleDataSubscription = BleService().dataStream.listen((value) {
+    ...
+});
+```
+
+#TTS
+
+##如何实现
+借助 Flutter TTS 使用手机本地的文字转语音模块，依赖：
+```dart
+dependencies:
+    flutter_tts: ^4.0.2
+```
+具体实现细节参考 [flutter_tts 官方文档](https://pub.dev/packages/flutter_tts)。
+
+
+#如何使用
+示例代码如下：
+```dart
+// 初始化
+final flutterTts = FlutterTts();
+await _flutterTts.awaitSpeakCompletion(true);
+if (Platform.isAndroid) {
+  await _flutterTts.setQueueMode(1);
+}
+
+// 调用文本转语音
+flutterTts.speak("你好，这是一次文本转语音测试。");
+
+// 中断或停止转语音
+flutterTts.stop();
+```

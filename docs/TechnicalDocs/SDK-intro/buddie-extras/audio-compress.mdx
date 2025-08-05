@@ -1,0 +1,21 @@
+# Audio Compression Module (PCA, OPUS)
+
+To transmit audio data over limited BLE bandwidth, we need to compress the audio before transmission. There are two compression methods: PCA and OPUS.
+
+## PCA Compression
+
+The main interfaces for this method are implemented in `cpu\br28\fft_and_pca.c` and `cpu\br28\fft_and_pca.h`. The key functions to pay attention to are:
+- `hw_fft_init()`: This is the initialization function for the FFT calculation module in the PCA compression algorithm. You must execute this function before performing FFT calculations.
+- `pca_task()`: Starts a task to perform PCA compression. This function calls the following methods:
+    - `mic_and_spk_data_pop_and_pre_emphasis(s16* emphasized_mic_and_spk_data, int spk_data_count, float sampling_ratio)`: Preprocesses (e.g., pre-emphasizes) the audio data obtained from the microphone and speaker (only during calls).
+    - `dct_transform(s16* input, s16* output)`: Performs DCT transformation on the data, converting it from the time domain to the frequency domain, utilizing the FFT module.
+    - `split_sign(s16* input, u8* sign)`: Separates the phase information from the frequency domain data into amplitude without sign and phase information represented as 0/1 binary.
+    - `compress_and_add_send_block(s16* spectrum, s8* sign)`: After PCA compression of the amplitude information, combines it with the sign information and inputs it into the BLE send queue.
+- `pca_open()`: Performs the above two operations and starts the PCA task.
+- `transcription_open()` and `transcription_close()`: Enable/disable the transcription state of the earphones. When transcription is enabled, it can prevent repeatedly opening the microphone during calls and closing it after calls.
+
+## OPUS Compression
+
+The main interfaces for this method are implemented in `cpu\br28\audio_common\audio_mic_codec.c` and `cpu\br28\audio_common\audio_dec_codec.c`, which are used to compress audio data from the microphone and speaker (only during calls), respectively. The key functions to pay attention to are:
+- `audio_mic_enc_open(int (*mic_output)(void *priv, void *buf, int len), u32 code_type, u8 ai_type)` and `audio_dec_enc_open(int (*dec_output)(void *priv, void *buf, int len), u32 code_type, u8 ai_type)`: Enable OPUS transcription for microphone/speaker audio. For specific usage, refer to `apps\common\third_party_profile\jieli\JL_rcsp\bt_trans_data\le_rcsp_adv_module.c`.
+- `audio_mic_enc_close()` and `audio_dec_enc_close()`: Disable OPUS transcription for microphone/speaker audio.

@@ -1,0 +1,73 @@
+import board_config from '@site/static/img/docs/board_config.png';
+import tasklist from '@site/static/img/docs/tasklist.png';
+import app_main from '@site/static/img/docs/app_main.png'
+
+
+# New Module Description and SDK Brief Introduction
+
+## 1 SDK Important File Description
+
+### 1.1 Board Configuration
+
+File location: `apps\earphone\board\br28\board_config.h`
+In board_config.h, we select `CONFIG_BOARD_JL7016G_HYBRID`. This activates the following three basic configuration files:
+1. `board_jl7016g_hybrid_cfg.h`
+2. `board_jl7016g_hybrid_global_build_cfg.h`
+3. `board_jl7016g_hybrid.c`
+In `board_jl7016g_hybrid_cfg.h`, we can further configure pins for peripherals such as UART, IIC, SD, etc.
+
+<img src={board_config} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+### 1.2 SDK Startup File
+
+File location: `apps\earphone\app_main.c`
+In `app_main.c`, we can see the SDK startup process. This file can be divided into two parts: `task_info task_info_table[]` and `app_main()`
+
+1. First is `task_info task_info_table[]`, which is a task information table that defines the name, priority, core to run on, stack size, and heap size for each task. Each task corresponds to a specific functional module.
+
+
+<img src={tasklist} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+2. Next is the `app_main()` function, which is the SDK entry function. It creates and starts various tasks according to the configuration in the task information table.
+
+<img src={app_main} alt="firmware" width="400" style={{ display: 'block', margin: '0 auto' }} />
+
+
+## 2 Buddie New Module Overview
+
+The Buddie new modules mainly include the following parts:
+1. Speaker detection
+2. Audio data compression (PCA, OPUS)
+3. Bluetooth data transmission and reception (BLE, SPP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

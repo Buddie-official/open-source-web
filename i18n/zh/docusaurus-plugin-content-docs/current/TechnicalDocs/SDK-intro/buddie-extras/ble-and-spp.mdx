@@ -1,0 +1,10 @@
+# 蓝牙数据发送与接受 (BLE, SPP)
+为了将数据通过蓝牙发送给手机，可以采用BLE或SPP协议进行发送。
+## BLE（低功耗蓝牙）
+主要接口位于`apps\common\third_party_profile\jieli\JL_rcsp\bt_trans_data\le_rcsp_adv_module.c`。其中需要关注的函数有：
+- `att_write_callback(hci_con_handle_t connection_handle, uint16_t att_handle, uint16_t transaction_mode, uint16_t offset, uint8_t *buffer, uint16_t buffer_size)`：用于控制开启不同Characteristic时执行不同的函数。在开启`ae03`（`ATT_CHARACTERISTIC_ae03_01_CLIENT_CONFIGURATION_HANDLE`）的通知后会开启PCA压缩，在开启`ae04`（`ATT_CHARACTERISTIC_ae04_01_CLIENT_CONFIGURATION_HANDLE`）的通知后会开启OPUS压缩。
+- `test_data_send_packet(void)`：用于循环发送BLE通知数据。PCA以及OPUS数据发送的具体内容在这个函数中有详细描述。
+## SPP（Serial Port Profile）
+主要接口位于`apps\common\third_party_profile\jieli\online_db\spp_online_db.c`。使用前需要前往`apps\earphone\board\br28\board_jl7016g_hybrid_cfg.h`中开启宏`APP_ONLINE_DEBUG`。其中需要关注的函数有：
+- `online_spp_init(void)`：初始化SPP。
+- `online_spp_send_data(u8 *data, u16 len)`：发送SPP数据包。

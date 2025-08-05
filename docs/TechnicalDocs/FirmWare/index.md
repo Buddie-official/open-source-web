@@ -1,6 +1,0 @@
----
-id: FirmWare-index
----
-
-
-FirmWare

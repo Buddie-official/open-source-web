@@ -1,0 +1,15 @@
+# Bluetooth Data Transmission and Reception (BLE, SPP)
+
+To send data to a mobile phone via Bluetooth, you can use either the BLE or SPP protocol.
+
+## BLE (Bluetooth Low Energy)
+
+The main interfaces are located in `apps\common\third_party_profile\jieli\JL_rcsp\bt_trans_data\le_rcsp_adv_module.c`. The key functions to pay attention to are:
+- `att_write_callback(hci_con_handle_t connection_handle, uint16_t att_handle, uint16_t transaction_mode, uint16_t offset, uint8_t *buffer, uint16_t buffer_size)`: Used to control the execution of different functions when different Characteristics are enabled. Enabling notifications for `ae03` (`ATT_CHARACTERISTIC_ae03_01_CLIENT_CONFIGURATION_HANDLE`) will start PCA compression, while enabling notifications for `ae04` (`ATT_CHARACTERISTIC_ae04_01_CLIENT_CONFIGURATION_HANDLE`) will start OPUS compression.
+- `test_data_send_packet(void)`: Used to continuously send BLE notification data. The specific content of PCA and OPUS data transmission is described in detail in this function.
+
+## SPP (Serial Port Profile)
+
+The main interfaces are located in `apps\common\third_party_profile\jieli\online_db\spp_online_db.c`. Before use, you need to enable the macro `APP_ONLINE_DEBUG` in `apps\earphone\board\br28\board_jl7016g_hybrid_cfg.h`. The key functions to pay attention to are:
+- `online_spp_init(void)`: Initializes SPP.
+- `online_spp_send_data(u8 *data, u16 len)`: Sends SPP data packets.
