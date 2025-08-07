@@ -1,43 +1,44 @@
-# APP Quick Start
+# APP 快速开始
 
-## Prerequisites
-- Flutter 3.32.4 • channel stable • https://github.com/flutter/flutter.git Framework • revision 6fba2447e9 • 2025-06-12 19:03:56 -0700 Engine • revision 8cd19e509d • 2025-06-12 16:30:12 -0700 Tools • Dart 3.8.1 • DevTools 2.45.1 （Flutter 3.32.*） Please refer to the official Flutter documentation: Set up your Flutter development environment(https://docs.flutter.dev/get-started/install)
+## 前置要求
+- Flutter 3.32.4 • channel stable • https://github.com/flutter/flutter.git Framework • revision 6fba2447e9 • 2025-06-12 19:03:56 -0700 Engine • revision 8cd19e509d • 2025-06-12 16:30:12 -0700 Tools • Dart 3.8.1 • DevTools 2.45.1 （Flutter 3.32.*） 请参考官方 Flutter 文档：设置 Flutter 开发环境(https://docs.flutter.dev/get-started/install)
 - Android Studio / Xcode
 
-## Installation
+## 安装
+
 ~~~ bash
-# Clone repository
+# 克隆仓库
 git clone https://github.com/Buddie-AI/Buddie.git
 cd Buddie/APP
 
-# Install dependencies
+# 安装依赖
 flutter pub get
 
-# Release an Android apk
+# 发布 Android apk
 flutter build apk --release
-For detailed documentation, refer to the Flutter official documentation for building Android apps.(https://docs.flutter.dev/deployment/android)
+详细文档请参考 Flutter 官方文档构建 Android 应用。(https://docs.flutter.dev/deployment/android)
 
-# Release an ios apk
+# 发布 iOS apk
 flutter build ipa
-Building and releasing an iOS app requires Xcode, so you must have a computer running macOS.
-An Apple Developer account is also required.
-For detailed documentation, refer to the Flutter official guide for building iOS apps.(https://docs.flutter.dev/deployment/ios)
+构建和发布 iOS 应用需要 Xcode，因此您必须有一台运行 macOS 的计算机。
+还需要 Apple Developer 账户。
+详细文档请参考 Flutter 官方指南构建 iOS 应用。(https://docs.flutter.dev/deployment/ios)
 
-# Launch on Android or an Android emulator
+# 在 Android 或 Android 模拟器上启动
 flutter run
 ~~~
 
 
 
-## 📖 User Guide
-1. The app will guide you through 30-second voiceprint registration when first launched.
-2. For enhanced voice features with Buddie headphones:
-- Open Settings in app
-- Select "Connect"
-- Ensure earphones are already paired in the system
-- Confirm connection in app
+## 📖 用户指南
+1. 首次启动时，应用将引导您完成 30 秒的声纹注册。
+2. 对于 Buddie 耳机的增强语音功能：
+- 在应用中打开设置
+- 选择"连接"
+- 确保耳机已在系统中配对
+- 在应用中确认连接
 
-## 🛠️ Tech Stack
-- **Frontend Framework**: Flutter
-- **State Management**: Provider
-- **Database**: ObjectBox
+## 🛠️ 技术栈
+- **前端框架**: Flutter
+- **状态管理**: Provider
+- **数据库**: ObjectBox

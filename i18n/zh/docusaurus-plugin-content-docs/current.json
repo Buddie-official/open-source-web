@@ -7,8 +7,28 @@
     "message": "Technical Documentation",
     "description": "The label for category Technical Documentation in sidebar TechnicalDocsSidebar"
   },
-  "sidebar.ChangelogBlogSidebar.category.Changelog & Blog": {
+  "sidebar.ChangelogBlogSidebar.category.Blog": {
     "message": "Changelog & Blog",
     "description": "The label for category Changelog & Blog in sidebar ChangelogBlogSidebar"
+  },
+  "sidebar.TechnicalDocsSidebar.category.Quick Start": {
+    "message": "快速开始",
+    "description": "The label for category Kubernetes in sidebar docs"
+  },
+  "sidebar.TechnicalDocsSidebar.category.Firmware": {
+    "message": "固件",
+    "description": "The label for category Firmware in sidebar docs"
+  },
+  "sidebar.TechnicalDocsSidebar.category.APP Intro": {
+    "message": "APP 介绍",
+    "description": "The label for category APP Intro in sidebar docs"
+  },
+  "sidebar.TechnicalDocsSidebar.category.Firmware SDK Intro": {
+    "message": "固件 SDK 介绍",
+    "description": "The label for category Firmware SDK Intro in sidebar docs"
+  },
+  "sidebar.TechnicalDocsSidebar.category.Buddie New Modules": {
+    "message": "Buddie 新增模块",
+    "description": "The label for category Buddie New Modules in sidebar docs"
   }
 }
