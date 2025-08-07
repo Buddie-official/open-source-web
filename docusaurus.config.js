@@ -74,19 +74,20 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+            // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: "blog",
           feedOptions: {
-            type: ["rss", "atom"],
+            type: ["rss"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+            // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful optioMasonUninstall emmylua_lsns to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -140,8 +141,7 @@ const config = {
             label: "Docs",
           },
           {
-            type: "docSidebar",
-            sidebarId: "ChangelogBlogSidebar",
+            to: "blog",
             position: "left",
             label: "Blog",
           },
@@ -156,7 +156,7 @@ const config = {
           },
           {
             label: "Community",
-            href: "https://club.bud.inc",
+            href: "https://discord.gg/hSDEbnqB",
             position: "left",
           },
         ],
