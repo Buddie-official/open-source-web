@@ -146,7 +146,7 @@ const config = {
             label: "Blog",
           },
           {
-            href: "https://github.com/Buddie-official/open-source-web",
+            href: "https://github.com/Buddie-AI/Buddie",
             label: "GitHub",
             position: "right",
           },

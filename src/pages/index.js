@@ -31,13 +31,24 @@ function HomepageHeader() {
         <p className="hero__subtitle">
           Buddie is an open-source toolkit to build your own AI voice companion. Create a partner that's truly in sync with you—listening, learning, and growing by your side.
         </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="docs/TechnicalDocs/intro"
-          >
-            Quick Start
-          </Link>
+
+        <div className={styles.buttonHome}>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="docs/TechnicalDocs/quickstart/app_quickstart"
+            >
+              Quick Start
+            </Link>
+          </div>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="https://github.com/Buddie-AI/Buddie"
+            >
+              Goto Github 
+            </Link>
+          </div>
         </div>
       </div>
     </header>
