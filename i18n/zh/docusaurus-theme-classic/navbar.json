@@ -12,11 +12,11 @@
     "description": "Navbar item with label Quick Start"
   },
   "item.label.Technical Docs": {
-    "message": "技术文档",
+    "message": "文档",
     "description": "Navbar item with label Technical Docs"
   },
   "item.label.Changelog & Blog": {
-    "message": "日志&博客",
+    "message": "博客",
     "description": "Navbar item with label Changelog & Blog"
   },
   "item.label.About Us": {

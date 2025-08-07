@@ -137,13 +137,13 @@ const config = {
             type: "docSidebar",
             sidebarId: "TechnicalDocsSidebar",
             position: "left",
-            label: "Technical Docs",
+            label: "Docs",
           },
           {
             type: "docSidebar",
             sidebarId: "ChangelogBlogSidebar",
             position: "left",
-            label: "Changelog & Blog",
+            label: "Blog",
           },
           {
             href: "https://github.com/Buddie-official/open-source-web",
@@ -168,8 +168,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/TechnicalDocs/intro",
+                label: "Quick Start",
+                to: "/docs/TechnicalDocs/quickstart/app_quickstart",
               },
             ],
           },
@@ -177,16 +177,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "X",
-                href: "https://x.com/docusaurus",
+                href: "https://discord.gg/hSDEbnqB",
               },
             ],
           },
