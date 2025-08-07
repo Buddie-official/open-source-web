@@ -31,13 +31,23 @@ function HomepageHeader() {
         <p className="hero__subtitle">
 Buddie 是一个开源AI语音软硬件解决方案，致力于帮助每个人轻松定制专属的AI伙伴。让他听你所言，思你所想，与你共同成长。
         </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="docs/TechnicalDocs/intro"
-          >
-            快速开始
-          </Link>
+        <div className={styles.buttonHome}>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="docs/TechnicalDocs/quickstart/app_quickstart"
+            >
+                快速开始  
+            </Link>
+          </div>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="https://github.com/Buddie-AI/Buddie"
+            >
+              Github 
+            </Link>
+          </div>
         </div>
       </div>
     </header>
