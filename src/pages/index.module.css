@@ -71,7 +71,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .workCard:hover {
@@ -79,6 +79,40 @@
   border-color: var(--card-hover-bg-color); /* 鼠标悬停时的边框颜色 */
   background-color: var(--card-hover-bg-color); /* 鼠标悬停时的背景颜色 */
 }
+
+.workCard > * {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+
+@media (max-width: 1300px) {
+  .workCardrow {
+    flex-direction: column; /* 改为纵向排列 */
+    align-items: stretch; /* 让卡片占满父容器宽度（可选） */
+  }
+  
+  /* 可选：调整窄屏时卡片的样式，使其更适配纵向布局 */
+  .workCard {
+    margin: 0 0 1rem 0; /* 纵向排列时，只保留上下间距 */
+    width: 100%; /* 卡片占满父容器宽度 */
+    max-width: 700px; /* 限制最大宽度，避免在极宽屏幕上过宽 */
+    margin-left: auto; /* 水平居中（配合 max-width 使用） */
+    margin-right: auto;
+  }
+}
+
+
+.cardText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 
 .cardDescription {
   flex: 5;
@@ -89,9 +123,9 @@
 }
 
 .cardImage {
-  flex: 1;
+  flex: 0.5;
     border-radius: 12px;
-    overflow: hidden;
+    /* overflow: auto; */
     width: 100%;
     aspect-ratio: 1 / 1;
     /* background-color: #f0f0f0;  */
