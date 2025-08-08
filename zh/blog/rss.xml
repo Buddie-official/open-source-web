@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>BUDDIE Blog</title>
+        <link>https://bud.inc/zh/blog</link>
+        <description>BUDDIE Blog</description>
+        <lastBuildDate>Thu, 07 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh</language>
+        <item>
+            <title><![CDATA[欢迎！]]></title>
+            <link>https://bud.inc/zh/blog/welcome</link>
+            <guid>https://bud.inc/zh/blog/welcome</guid>
+            <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[欢迎，来打造这真正懂你的 AI 伙伴吧！]]></description>
+            <content:encoded><![CDATA[<p>欢迎，来打造这真正懂你的 AI 伙伴吧！</p>
+<p>BUDDIE 是首个全栈开源 AI 语音交互解决方案，提供从硬件设计到软件应用的完整端到端系统。在这里，你可以找到涵盖从 PCB 和嵌入式固件到应用程序的全面解决方案。通过这个项目，我们旨在帮助每个人创建自己的个性化 24/7 语音伙伴——一个倾听你所听、思考你所想、担忧你所忧、与你一起成长、一起探索世界的伙伴。让《她》的未来成为现实。</p>
+<h1>功能特性</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-智能语音移动应用">🎧 智能语音移动应用<a href="https://bud.inc/zh/blog/welcome#-%E6%99%BA%E8%83%BD%E8%AF%AD%E9%9F%B3%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8" class="hash-link" aria-label="🎧 智能语音移动应用的直接链接" title="🎧 智能语音移动应用的直接链接">​</a></h2>
+<p>完整的 AI 语音交互解决方案，包含开源 AI 交互逻辑和语音模型，与嵌入式固件数据传输无缝集成，提供一体化智能语音体验！</p>
+<ul>
+<li><strong>开源 AI 语音引擎：</strong> 访问和定制核心 AI 交互逻辑和语音模型，以适应你独特的应用需求。</li>
+<li><strong>无缝嵌入式集成：</strong> 轻松连接嵌入式固件进行实时数据交换，实现硬件和软件之间的流畅通信。</li>
+<li><strong>端到端语音体验：</strong> 从语音捕获到智能响应，在单一平台内享受统一和流畅的语音交互过程。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-嵌入式固件源代码">📱 嵌入式固件源代码<a href="https://bud.inc/zh/blog/welcome#-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%9B%BA%E4%BB%B6%E6%BA%90%E4%BB%A3%E7%A0%81" class="hash-link" aria-label="📱 嵌入式固件源代码的直接链接" title="📱 嵌入式固件源代码的直接链接">​</a></h2>
+<p>专为 Jieli 芯片定制的完整固件，集成音频协议、压缩算法和系统控制模块，与 PCB 完美匹配，实现轻松扩展和适配！</p>
+<ul>
+<li><strong>全面的音频协议支持：</strong> 内置支持广泛的音频协议，确保与各种音频设备和外设的无缝兼容性。</li>
+<li><strong>先进的压缩算法：</strong> 高效的音频数据压缩，减少延迟并优化存储，即使在资源受限的硬件上也能实现高质量的语音交互。</li>
+<li><strong>强大的系统控制集成：</strong> 与系统控制模块和 PCB 设计的深度集成，允许轻松的硬件扩展、灵活的功能升级，以及在不同应用场景下的可靠性能。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-电路设计原理图">🌐 电路设计原理图<a href="https://bud.inc/zh/blog/welcome#-%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86%E5%9B%BE" class="hash-link" aria-label="🌐 电路设计原理图的直接链接" title="🌐 电路设计原理图的直接链接">​</a></h2>
+<p>完全开源的 PCB 设计！电路布局、原理图和 BOM 清单全部公开可用——支持 DIY 组装、快速原型制作和个性化开发，拥有完全的自由度！</p>
+<ul>
+<li><strong>模块化扩展就绪：</strong> 轻松定制和扩展硬件功能，以适应你独特的项目需求。</li>
+<li><strong>全面的文档：</strong> 分步指南和详细资源，支持各种经验水平的创客。</li>
+</ul>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[658],{4462:(e,s,i)=>{i.r(s),i.d(s,{default:()=>t});i(6540);var n=i(4848);function t(){return(0,n.jsxs)("main",{children:[(0,n.jsx)("h1",{children:"Test Page - English"}),(0,n.jsx)("p",{children:"This is a test page for i18n."})]})}}}]);

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>BUDDIE Blog</title>
+        <link>https://bud.inc/blog</link>
+        <description>BUDDIE Blog</description>
+        <lastBuildDate>Thu, 07 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://bud.inc/blog/welcome</link>
+            <guid>https://bud.inc/blog/welcome</guid>
+            <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome! Build the buddie that gets you.]]></description>
+            <content:encoded><![CDATA[<p>Welcome! Build the buddie that gets you.</p>
+<p>BUDDIE is the first full-stack open-source AI voice interaction solution, providing a complete end-to-end system from hardware design to software applications. Here, you can find a comprehensive solution covering everything from PCB and embedded firmware to the app. Through this project, we aim to help everyone create their own personalized 24/7 voice companion—one that listens to what you listen to, thinks what you think, worries about what you worry about, grows with you, and explores the world together. Let the future of "Her" become reality.</p>
+<h1>Features</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-smart-voice-mobile-application">🎧 Smart Voice Mobile Application<a href="https://bud.inc/blog/welcome#-smart-voice-mobile-application" class="hash-link" aria-label="Direct link to 🎧 Smart Voice Mobile Application" title="Direct link to 🎧 Smart Voice Mobile Application">​</a></h2>
+<p>A complete AI voice interaction solution featuring open-source AI interaction logic and speech models, seamlessly integrated with embedded firmware data transmission for an all-in-one intelligent voice experience!</p>
+<ul>
+<li><strong>Open-Source AI Voice Engine:</strong> Access and customize the core AI interaction logic and speech models to fit your unique application needs.</li>
+<li><strong>Seamless Embedded Integration:</strong> Effortlessly connect with embedded firmware for real-time data exchange, enabling smooth communication between hardware and software.</li>
+<li><strong>End-to-End Voice Experience:</strong> From voice capture to intelligent response, enjoy a unified and streamlined voice interaction process within a single platform.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-embedded-firmware-source-code">📱 Embedded Firmware Source Code<a href="https://bud.inc/blog/welcome#-embedded-firmware-source-code" class="hash-link" aria-label="Direct link to 📱 Embedded Firmware Source Code" title="Direct link to 📱 Embedded Firmware Source Code">​</a></h2>
+<p>A fully customized firmware for Jieli chips, integrating audio protocols, compression algorithms, and system control modules, perfectly matched with the PCB for effortless expansion and adaptation!</p>
+<ul>
+<li><strong>Comprehensive Audio Protocol Support:</strong> Built-in support for a wide range of audio protocols, ensuring seamless compatibility with various audio devices and peripherals.</li>
+<li><strong>Advanced Compression Algorithms:</strong> Efficient audio data compression for reduced latency and optimized storage, enabling high-quality voice interaction even on resource-constrained hardware.</li>
+<li><strong>Robust System Control Integration:</strong> Deep integration with system control modules and PCB design, allowing for easy hardware expansion, flexible feature upgrades, and reliable performance across diverse application scenarios.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-circuit-design-schematics">🌐 Circuit Design Schematics<a href="https://bud.inc/blog/welcome#-circuit-design-schematics" class="hash-link" aria-label="Direct link to 🌐 Circuit Design Schematics" title="Direct link to 🌐 Circuit Design Schematics">​</a></h2>
+<p>Fully open-source PCB design! Circuit layouts, schematics, and BOM lists are all publicly available—enabling DIY assembly, rapid prototyping, and personalized development with complete freedom!</p>
+<ul>
+<li><strong>Modular Expansion Ready:</strong> Easily customize and expand hardware features to suit your unique project requirements.</li>
+<li><strong>Comprehensive Documentation:</strong> Step-by-step guides and detailed resources to support makers of all experience levels.</li>
+</ul>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
