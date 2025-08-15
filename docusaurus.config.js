@@ -156,7 +156,7 @@ const config = {
           },
           {
             label: "Community",
-            href: "https://discord.gg/hSDEbnqB",
+            href: "https://discord.gg/VnReYezFV3",
             position: "left",
           },
         ],
@@ -178,7 +178,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.gg/hSDEbnqB",
+                href: "https://discord.gg/VnReYezFV3",
               },
             ],
           },
