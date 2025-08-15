@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"\u6700\u8fd1\u7684\u6587\u7ae0","items":[{"title":"\u6b22\u8fce\uff01","permalink":"/zh/blog/welcome","unlisted":false,"date":"2025-08-07T00:00:00.000Z"}]}')}}]);
